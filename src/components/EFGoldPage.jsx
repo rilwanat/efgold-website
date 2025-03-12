@@ -463,7 +463,7 @@ We operate in the following listed countries: Angola, Benin Republic, Burkina Fa
 <div className="video-container" 
 style={{
   position: "relative",
-  width: "560px",
+  width: "100%",
   height: "400px",
   margin: "auto",
   zIndex: 1, // Lower than navbar

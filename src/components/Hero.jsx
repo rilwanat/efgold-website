@@ -19,11 +19,11 @@ const Hero = ({  }) => {
   ];
 
   const headerText = [
-    'Leaders in Gold Mining Technology',
-    'Trusted Partner in Gold Mining',
+    'Leaders in Gold Solutions',
+    'Trusted Partner in Gold Trade',
     'Strategic Planning for Gold Business',
+];
 
-  ];
   
   const subText = [
     'Welcome to E.F Gold',

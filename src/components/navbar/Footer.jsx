@@ -44,7 +44,7 @@ function Footer({
               />
             </div>
             {/* <p className=' mb-2' style={{ color: '#eeeeee', fontSize: '20px' }}>ABOUT</p> */}
-            <p className='' style={{ color: '#eeeeee', fontSize: '14px' }}>EFGold is a gold mining company operating in Abuja and Jos, dedicated to sustainable and responsible mining practices. With a commitment to excellence, we specialize in the exploration, extraction, and processing of high-quality gold, contributing to economic growth and industry innovation.</p>
+            <p className='' style={{ color: '#eeeeee', fontSize: '14px' }}>EFGold is a leading provider of high-quality gold products, serving Abuja and Jos with a commitment to excellence. Our focus on sustainability ensures we contribute to economic growth and industry innovation.</p>
             <div className='flex mt-4' style={{ color: '#eeeeee' }}>
               <a href='https://www.facebook.com/efnetworkltd' target='_blank'>
               <FacebookIcon 

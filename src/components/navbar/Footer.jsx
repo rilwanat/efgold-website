@@ -36,14 +36,14 @@ function Footer({
           <div className="flex flex-col md:items-start md:w-1/3 my-4 md:h-40">
             <div className="flex items-center mb-2 ">
               <img
-                className="block h-10 w-auto max-w-none"
+                className="block h-14 w-auto max-w-none"
                 src={logo2}
                 alt="Logo"
                 onClick={() => { navigate('/'); }}
                 style={{ cursor: 'pointer' }}
               />
             </div>
-            <p className=' mb-2' style={{ color: '#eeeeee', fontSize: '20px' }}>ABOUT</p>
+            {/* <p className=' mb-2' style={{ color: '#eeeeee', fontSize: '20px' }}>ABOUT</p> */}
             <p className='' style={{ color: '#eeeeee', fontSize: '14px' }}>EFGold is a gold mining company operating in Abuja and Jos, dedicated to sustainable and responsible mining practices. With a commitment to excellence, we specialize in the exploration, extraction, and processing of high-quality gold, contributing to economic growth and industry innovation.</p>
             <div className='flex mt-4' style={{ color: '#eeeeee' }}>
               <a href='https://www.facebook.com/efnetworkltd' target='_blank'>
@@ -110,7 +110,7 @@ function Footer({
     
         <div className="mt-auto flex ">
           <div className="bottom-0 w-full flex md:flex-row flex-col justify-between pt-2 pb-4 mb-2">
-          <p className="text-sm  md:mt-0 mt-4">Copyright &copy; 2025 <a className='text-theme'>E.F GOLD</a></p>
+          <p className="text-sm  md:mt-0 mt-4">Copyright &copy; 2025 <a className='text-theme'>EF GOLD</a></p>
 
             <div className='flex md:flex-row flex-col'>
               <div className='flex'>

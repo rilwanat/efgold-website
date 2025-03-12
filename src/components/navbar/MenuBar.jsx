@@ -37,19 +37,18 @@ export default function MenuBar({
   const menuItems = [
     { label: 'HOME', href: '/' },
     { label: 'COMPANY', dropdown: [
-      { label: 'About Us', href: '/about-us' },
-      { label: 'Our Team', href: '/our-team' },
-      { label: 'Why Choose Us', href: '/why-choose-us' },
-      { label: 'Careers', href: '/careers' },
-      { label: 'FAQ', href: '/faq' },
+      { label: 'About Us', href: '' },
+      { label: 'Our Team', href: '' },
+      { label: 'Why Choose Us', href: '' },
+      { label: 'FAQ', href: '' },
     ] },
     { label: 'SUBSIDIARIES', dropdown: [
       // { label: 'EFGold', href: '/ef-gold' },
-      { label: 'EFEnergy', href: '/ef-energy' },
-      { label: 'EFPhoneTaxi', href: '/ef-phonetaxi' },
-      { label: 'EFWaste Management', href: '/ef-waste-management' },
-      { label: 'EFSkyview', href: '/ef-skyview' },
-      { label: 'EFPriceCheck', href: '/ef-contact' },
+      { label: 'EFEnergy', href: '' },
+      { label: 'EFPhoneTaxi', href: '' },
+      { label: 'EFWaste Management', href: '' },
+      { label: 'EFSkyview', href: '' },
+      { label: 'EFPriceCheck', href: '' },
       // { label: 'EFWireless', href: '/ef-wireless' },
     ] },
     // { label: 'MEDIA', dropdown: [
@@ -57,7 +56,7 @@ export default function MenuBar({
     //   { label: 'Articles', href: '/articles' },
     //   { label: 'Gallery', href: '/gallery' },
     // ] },
-    { label: 'CONTACT', href: '/contact' },
+    { label: 'CONTACT', href: '' },
   ];
   useEffect(() => {
     dropdownRefs.current = menuItems.map(() => React.createRef());
@@ -195,7 +194,7 @@ onMouseLeave={(e) => handleMouseLeave(e)}
         >
           <a
             className="text-sm text-white cursor-pointer"
-            style={{ fontWeight: '600', cursor: 'pointer' }}
+            style={{ fontWeight: '400', cursor: 'pointer' }}
             href={item.href}
           >
             {item.label}
@@ -203,7 +202,7 @@ onMouseLeave={(e) => handleMouseLeave(e)}
           {item.dropdown && (
             <KeyboardArrowDownIcon
               className="text-white"
-              style={{ width: '20px', height: '20px', paddingTop: '2px',  }}
+              style={{ width: '20px', height: '20px', paddingTop: '1px',  marginLeft: '2px',}}
             />
           )}
 

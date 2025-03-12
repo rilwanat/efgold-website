@@ -19,6 +19,10 @@ import PersonIcon from '@mui/icons-material/Person';
 
 import stars from '../../assets/images/stars.png';
 
+
+import EmailComponent from '../widgets/EmailComponent.jsx';
+import CallComponent from '../widgets/CallComponent.jsx';
+
 export default function HeaderHead({ 
   isMobile, isMenuOpen, toggleMenu, closeMenu
  }) {
@@ -45,22 +49,9 @@ export default function HeaderHead({
             href='/'
             >E.F GOLD</a>
           </div> */}
-          <div className='flex mr-8 cursor-pointer  text-theme'
-            onClick={() => {}}
-          >
-              <div className='mr-2'><EmailIcon style={{ width: '18px', height: '20px'  }} /></div>
-              <div className='flex flex-col' style={{ color: '#eeeeee' }}>
-                <div>info@efgold.net</div>
-              </div>
-            </div>
-            <div className='flex mr-8 cursor-pointer text-theme' 
-            onClick={() => {}}
-          >
-              <div className='mr-2'><CallIcon style={{ width: '18px', height: '20px'  }} /></div>
-              <div className='flex flex-col' style={{ color: '#eeeeee' }}>
-                <div className="whitespace-nowrap">+234 809 111 3333</div>
-              </div>
-            </div>
+          <EmailComponent />
+          <CallComponent />
+            
         </div>
         <div className='flex items-center justify-end w-1/2 h-full'>
           

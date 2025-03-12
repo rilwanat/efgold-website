@@ -35,7 +35,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import NotificationModal from './modals/NotificationModal';
 
 import Hero from './Hero';
-
+import { motion } from "framer-motion";
 
 
 export default function EFGoldPage({ 
@@ -391,18 +391,14 @@ const handleSendMessage = async () => {
         <div className='flex'>
           <div className='w-full rounded-lg'>
 
-          {isMenuOpen ? <div></div> :  <Hero/>}
+          {isMenuOpen ? <div></div> : <Hero/>}
 
 
-          {isMenuOpen ? <div></div> :  <HeaderParallax 
-        imageUrl={gold}//"/images/your-image.jpg";
-            title={"EF Gold"}
-            subtitle={""}
-        />}
+          {/* {isMenuOpen ? <div></div> : <HeaderParallax imageUrl={gold} title={"EF Gold"} subtitle={""} />} */}
           
-
-
-{/* <HeroGold /> */}
+          
+          
+          {/* <HeroGold /> */}
 
             {/* <Hero  /> */}
             {/* <OurProducts /> */}
@@ -422,35 +418,45 @@ const handleSendMessage = async () => {
                                                           }}
                                                           >
 
-
+<motion.div
+      initial={{ opacity: 0, y: 50 }} // Start faded and below
+      animate={{ opacity: 1, y: 0 }} // Fade in and move up
+      transition={{ duration: 0.8, ease: "easeOut", delay: 1.0 }} // Smooth animation
+      className="flex w-full h-full items-center justify-center mt-4"
+    >
+<div>
 <p className='my-8' style={{fontSize: '16px', color: '#777777'  }}>
 We have been in the gold business for over 17 years, serving various African countries. Our gold is sold on a <strong>CIF</strong> or <strong>FOB</strong> basis, and we provide air transport to all destinations except sanctioned countries.
 
 We operate in the following listed countries: Angola, Benin Republic, Burkina Faso, Democratic Republic of the Congo (DRC), Equatorial Guinea, Ethiopia, Ghana, Guinea Conakry, Kenya, Liberia, Libya, Mali, Mauritania, Mauritius, Mozambique, Namibia, Sao Tomé, Senegal, Sierra Leone, South Africa, South Sudan, Tanzania, Togo, Uganda, and Zimbabwe
 </p>
+</div>
+</motion.div>
 
 
 
 
 
-<div className='flex w-full h-full items-center justify-center mt-4'
->
-      <div  className='w-full' style={{  }}>
+<motion.div
+      initial={{ opacity: 0, y: 50 }} // Start faded and below
+      animate={{ opacity: 1, y: 0 }} // Fade in and move up
+      transition={{ duration: 0.8, ease: "easeOut", delay: 1.5 }} // Smooth animation
+      className="flex w-full h-full items-center justify-center mt-4"
+    >
+      <div className="w-full">
         <Slider {...settings}>
           {goldImages.map((image, index) => (
-            <div key={index} 
-            className='flex w-full items-center justify-center px-2  ' >
+            <div key={index} className="flex w-full items-center justify-center px-2">
               <img 
-              // className='border-2 border-theme'
-                src={image}
-                alt={`Slide ${index + 1}`}
+                src={image} 
+                alt={`Slide ${index + 1}`} 
                 style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
               />
             </div>
           ))}
         </Slider>
       </div>
-    </div>
+    </motion.div>
 
 
 

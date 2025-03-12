@@ -23,7 +23,8 @@ import PlaceIcon from '@mui/icons-material/Place';
 import EmailIcon from '@mui/icons-material/Email';
 import CallIcon from '@mui/icons-material/Call';
 
-
+import EmailComponent from '../widgets/EmailComponent.jsx';
+import CallComponent from '../widgets/CallComponent.jsx';
 
 export default function MobileNavbar({ 
   isMobile, isMenuOpen, toggleMenu, closeMenu
@@ -49,22 +50,12 @@ export default function MobileNavbar({
 {/* <div className='text-theme' style={{ fontWeight: '600', cursor: 'pointer', }}>E.F GOLD</div> */}
 <div className="ml-4 md:flex justify-end" style={{}}>
             <div className="text-right">
-            <div className='flex mr-8 cursor-pointer  text-theme'
-            onClick={() => {}}
-          >
-              <div className='mr-2'><EmailIcon style={{ width: '18px', height: '20px'  }} /></div>
-              <div className='flex flex-col' style={{ color: '#eeeeee' }}>
-                <div>info@efgold.net</div>
-              </div>
-            </div>
-            <div className='flex mr-8 cursor-pointer text-theme' 
-            onClick={() => {}}
-          >
-              <div className='mr-2'><CallIcon style={{ width: '18px', height: '20px'  }} /></div>
-              <div className='flex flex-col' style={{ color: '#eeeeee' }}>
-                <div className="whitespace-nowrap">+234 809 111 3333</div>
-              </div>
-            </div>
+            
+           
+           <EmailComponent />
+           <CallComponent />
+
+
             </div>
           </div>
 

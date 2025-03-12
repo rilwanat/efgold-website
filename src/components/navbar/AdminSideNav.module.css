@@ -1,0 +1,71 @@
+.sidenav {
+    width: 240px;
+    transition: width 0.3s ease-in-out;
+    height: 100vh;
+    padding-top: 0px;
+    background-color: #3D97E7;
+  }
+  
+  .sidenavClosed {
+    composes: sidenav;
+    transition: width 0.3s ease-in-out;
+    width: 60px;
+  }
+  
+  .sideitem {
+    display: flex;
+    align-items: center;
+    /* justify-items: center; */
+    padding: 8px 8px;
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 8px;
+  }
+
+  .sideitemMobile {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #3D97E7;
+    text-decoration: none;
+
+    margin: 20px;
+  }
+  
+  .linkText {
+    padding-left: 8px;
+  }
+  
+  .linkTextClosed {
+    composes: linkText;
+    visibility: hidden;
+  }
+  
+  .sideitem:hover {
+    background-color: #E5F1FD;
+    color: #3D97E7;
+    border-radius: 8px;
+  }
+  
+  .menuBtn {
+    align-self: center;
+    align-self: flex-start;
+    justify-self: flex-end;
+    color: #525252;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  
+  .sideitemActive {
+    background-color: #E5F1FD;
+    color: #3D97E7;
+    border-radius: 8px;
+  }
+  

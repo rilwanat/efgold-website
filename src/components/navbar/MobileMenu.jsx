@@ -143,7 +143,7 @@ function MobileMenu({
           animate={isMenuOpen ? "visible" : "hidden"}
           className="text-sm  cursor-pointer block my-4 mx-6"
           onClick={() => {
-            navigate('/about-us');
+            // navigate('/about-us');
             toggleMenu();
           }}
         >
@@ -156,7 +156,7 @@ function MobileMenu({
           animate={isMenuOpen ? "visible" : "hidden"}
           className="text-sm  cursor-pointer block my-4 mx-6"
           onClick={() => {
-            navigate('/our-team');
+            // navigate('/our-team');
             toggleMenu();
           }}
         >
@@ -169,7 +169,7 @@ function MobileMenu({
           animate={isMenuOpen ? "visible" : "hidden"}
           className="text-sm  cursor-pointer block my-4 mx-6"
           onClick={() => {
-            navigate('/why-choose-us');
+            // navigate('/why-choose-us');
             toggleMenu();
           }}
         >
@@ -221,7 +221,7 @@ function MobileMenu({
           animate={isMenuOpen ? "visible" : "hidden"}
           className="text-sm  cursor-pointer block my-4 mx-6 "
           onClick={() => {
-            navigate('/ef-gold');
+            // navigate('/ef-gold');
             toggleMenu();
           }}
         >
@@ -249,7 +249,7 @@ function MobileMenu({
           animate={isMenuOpen ? "visible" : "hidden"}
           className="text-sm  cursor-pointer block my-4 mx-6"
           onClick={() => {
-            navigate('/contact');
+            // navigate('/contact');
             toggleMenu();
           }}
         >

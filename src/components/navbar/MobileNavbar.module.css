@@ -1,16 +1,26 @@
 .sidenav {
-  width: 260px;
+  min-width: 260px;
   transition: width 0.3s ease-in-out;
   height: 100vh;
   padding-top: 0px;
   background-color: #000000;
 }
 
-.sidenavClosed {
+/* .sidenavClosed {
   composes: sidenav;
   transition: width 0.3s ease-in-out;
   width: 60px;
+} */
+.sidenavClosed {
+  min-width: 60px;
+  height: 100vh;
+  padding-top: 0px;
+  background-color: #000000;
+  transition: width 0.3s ease-in-out;
+
+  overflow: hidden;
 }
+
 
 .sideitem {
   display: flex;
@@ -34,10 +44,14 @@
   padding-left: 4px;
 }
 
-.linkTextClosed {
+/* .linkTextClosed {
   composes: linkText;
   visibility: hidden;
+} */
+.linkTextClosed {
+  display: none;
 }
+
 
 .sideitem:hover {
   /* background-color: #E5F1FD; */

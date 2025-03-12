@@ -48,7 +48,7 @@ export default function MobileNavbar({
           />
 
 {/* <div className='text-theme' style={{ fontWeight: '600', cursor: 'pointer', }}>E.F GOLD</div> */}
-{/* <div className="ml-4 md:flex justify-end" style={{}}>
+<div className="ml-4 md:flex justify-end" style={{}}>
             <div className="text-right">
             
            
@@ -57,7 +57,7 @@ export default function MobileNavbar({
 
 
             </div>
-          </div> */}
+          </div>
 
 
 

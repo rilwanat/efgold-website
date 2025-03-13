@@ -28,7 +28,7 @@ const Hero = ({  }) => {
   const subText = [
     'Welcome to E.F Gold',
     'Secure & Efficient Gold Transactions',
-    'Track Your Gold Holdings',
+    'Reliable Gold Supply Across Africa',
 ];
 
   //

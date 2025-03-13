@@ -38,18 +38,15 @@ export default function MenuBar({
     { label: 'HOME', href: '/' },
     { label: 'COMPANY', dropdown: [
       { label: 'About Us', href: '' },
-      { label: 'Our Team', href: '' },
+      // { label: 'Our Team', href: '' },
       { label: 'Why Choose Us', href: '' },
       { label: 'FAQ', href: '' },
     ] },
     { label: 'SUBSIDIARIES', dropdown: [
-      // { label: 'EFGold', href: '/ef-gold' },
-      { label: 'EFEnergy', href: '' },
-      { label: 'EFPhoneTaxi', href: '' },
-      { label: 'EFWaste Management', href: '' },
-      { label: 'EFSkyview', href: '' },
-      { label: 'EFPriceCheck', href: '' },
-      // { label: 'EFWireless', href: '/ef-wireless' },
+      { label: 'E.F. Network Ltd', href: 'https://eftechnology.net/' },
+      { label: 'E.F. Waste Management Ltd', href: 'https://efwaste.com/' },
+      { label: 'E.F. Skyview Ltd', href: 'https://efskyview.com/' },
+      { label: 'Gabtaxi', href: 'https://gabtaxi.com/' },
     ] },
     // { label: 'MEDIA', dropdown: [
     //   { label: 'News', href: '/news' },
@@ -233,6 +230,7 @@ onMouseLeave={(e) => handleMouseLeave(e)}
                     key={subIndex}
                     href={subItem.href}
                     className="block p-2 hover:bg-theme hover:text-white rounded-sm cursor-pointer" 
+                    target='_blank'
                   >
                     {subItem.label}
                   </a>

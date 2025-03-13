@@ -427,8 +427,14 @@ const handleSendMessage = async () => {
 <div>
 <p className='my-8' style={{fontSize: '16px', color: '#777777'  }}>
 We have been in the gold business for over 17 years, serving various African countries. Our gold is sold on a <strong>CIF</strong> or <strong>FOB</strong> basis, and we provide air transport to all destinations except sanctioned countries.
+</p>
 
+<p className='my-8' style={{fontSize: '16px', color: '#777777'  }}>
 We operate in the following listed countries: Angola, Benin Republic, Burkina Faso, Democratic Republic of the Congo (DRC), Equatorial Guinea, Ethiopia, Ghana, Guinea Conakry, Kenya, Liberia, Libya, Mali, Mauritania, Mauritius, Mozambique, Namibia, Sao Tomé, Senegal, Sierra Leone, South Africa, South Sudan, Tanzania, Togo, Uganda, and Zimbabwe
+</p>
+
+<p  className='my-8' style={{fontSize: '16px', color: '#777777'  }}>
+With the capability to <strong>charter planes</strong> for fast and secure gold deliveries—excluding sanctioned countries—EF Gold is among the most <strong>efficient suppliers</strong> in Africa. We also offer <strong>alternative shipping options</strong> and can supply anywhere from <strong>10kg to 10 tons</strong> of gold monthly.
 </p>
 </div>
 </motion.div>

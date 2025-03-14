@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import conference from '../assets/images/conference-wide.jpg';
+// import conference from '../assets/images/conference-wide.jpg';
 
 
 function ParallaxDiv({ imageUrl, title, subtitle  }) {
@@ -13,7 +13,7 @@ function ParallaxDiv({ imageUrl, title, subtitle  }) {
     <div
       className="relative h-[400px] overflow-hidden" // Adjust height as needed
       style={{
-        backgroundImage: `url(${conference})`, // Corrected line//`url(${imageUrl})`,
+        backgroundImage: `url(${imageUrl})`, // Corrected line//`url(${imageUrl})`,
         backgroundAttachment: 'fixed',
         backgroundSize: 'cover',
         backgroundPosition: 'center',

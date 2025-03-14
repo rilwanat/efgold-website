@@ -4,8 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import Header from './navbar/Header';
 import Footer from './navbar/Footer';
 import MenuBar from './navbar/MenuBar';
+
+import Parallax from './Parallax';
 import HeaderParallax from './HeaderParallax';
+
 import conference from '../assets/images/conference-wide.jpg';
+import goldx2 from '../assets/images/goldx2.png';
 
 import md from '../assets/images/md.jpg';
 
@@ -134,15 +138,16 @@ export default function AboutPage({
           Who We Are
         </motion.h1>
 
-        <motion.p
+        <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
           className="text-lg text-gray-600 mb-6"
         >
-         <p className='mb-8' style={{fontSize: '16px', color: '#777777'  }}>
-         EF Gold is a global leader in the supply of African gold, committed to excellence and sustainability. With over 17 years of experience, we drive economic growth and innovation in the gold trade.</p>
-         </motion.p>
+         <div className='mb-8' style={{fontSize: '16px', color: '#777777'  }}>
+         EF Gold is a global leader in the supply of African gold, committed to excellence and sustainability. With over 17 years of experience, we drive economic growth and innovation in the gold trade.
+         </div>
+         </motion.div>
 
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
@@ -207,7 +212,18 @@ export default function AboutPage({
             
 
           </div>
-        </div>      
+        </div>  
+
+
+        
+                {isMobile ? <div></div> :  <Parallax 
+                imageUrl={goldx2}//"/images/your-image.jpg";
+                    title={"Secure & Reliable Gold Supply Across the Globe"}
+                    subtitle={"Ready to begin your journey with us?"}
+                />}
+
+
+
       <Footer 
         isMobile={isMobile} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} closeMenu={closeMenu}
       />

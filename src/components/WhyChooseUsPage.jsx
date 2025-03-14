@@ -4,8 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import Header from './navbar/Header';
 import Footer from './navbar/Footer';
 import MenuBar from './navbar/MenuBar';
+
+import Parallax from './Parallax';
 import HeaderParallax from './HeaderParallax';
+
 import conference from '../assets/images/conference-wide.jpg';
+import goldx2 from '../assets/images/goldx2.png';
 
 import md from '../assets/images/md.jpg';
 
@@ -125,75 +129,27 @@ export default function WhyChooseUsPage({
     >
       <div className="mx-auto py-8">
         
-        <motion.h1
-          initial={{ y: -50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          className="text-2xl font-bold text-gray-800 mb-2"
-        >
-          Who We Are
-        </motion.h1>
+      <motion.h1
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.2, duration: 0.5 }}
+      className="text-2xl font-bold text-gray-800 mb-2"
+    >
+      Why Choose EF Gold?
+    </motion.h1>
 
-        <motion.p
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-          className="text-lg text-gray-600 mb-6"
-        >
-         <p className='mb-8' style={{fontSize: '16px', color: '#777777'  }}>
-         EF Gold is a global leader in the supply of African gold, committed to excellence and sustainability. With over 17 years of experience, we drive economic growth and innovation in the gold trade.</p>
-         </motion.p>
+    <motion.div
+      initial={{ y: 50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.4, duration: 0.5 }}
+      className="text-lg text-gray-600 mb-6"
+    >
+      <div className="mb-8 text-gray-700 text-base">
+        With over 17 years in the gold industry, EF Gold is your trusted partner for secure, efficient, and transparent gold trading. We prioritize reliability, safety, and customer satisfaction in every transaction.
+      </div>
+    </motion.div>
 
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.6, duration: 0.5 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8"
-        >
-          <div className="bg-gray-200 shadow-lg p-8 rounded-lg" >
-            <div className='flex flex-col items-start mb-4'>
-              <div className='p-4 mb-4 rounded-lg bg-theme flex items-center justify-center'><LocalShippingIcon className='' /></div>
-              <h2 className="text-2xl font-semibold text-gray-800">Safe & Secure Gold Transport</h2>
-              
-            </div>
-            <p className="" style={{fontSize: '16px', color: '#777777'  }}>
-            We ensure the safe transportation of gold from Africa to international destinations, excluding sanctioned countries. Our services include air transport and security for seamless deliveries.
-            </p>
-          </div>
 
-          <div className="bg-gray-200 shadow-lg p-8 rounded-lg">
-            <div className='flex flex-col items-start mb-4'>
-              <div className='p-4 mb-4 rounded-lg bg-theme flex items-center justify-center'><PublicIcon className='' /></div>
-              <h2 className="text-2xl font-semibold text-gray-800">Our Global Reach</h2>
-              
-            </div>
-            <p className="" style={{fontSize: '16px', color: '#777777'  }}>
-            We operate in multiple African countries, including Angola, Ghana, Kenya, South Africa, Tanzania, and many more. Our extensive network ensures a steady and reliable gold supply.
-            </p>
-          </div>
-
-          <div className="bg-gray-200 shadow-lg p-8 rounded-lg">
-            <div className='flex flex-col items-start mb-4'>
-              <div className='p-4 mb-4 rounded-lg bg-theme flex items-center justify-center'><CompareArrowsIcon className='' /></div>
-              <h2 className="text-2xl font-semibold text-gray-800">Flexible Supply Options</h2>
-              
-            </div>
-            <p className="" style={{fontSize: '16px', color: '#777777'  }}>
-            EF Gold offers CIF and FOB transactions, catering to different buyer needs. We can supply anywhere from 10kg to 10 tons of gold monthly, ensuring flexibility for businesses of all sizes.
-            </p>
-          </div>
-
-          <div className="bg-gray-200 shadow-lg p-8 rounded-lg">
-            <div className='flex flex-col items-start mb-4'>
-              <div className='p-4 mb-4 rounded-lg bg-theme flex items-center justify-center'><HandshakeIcon className='' /></div>
-              <h2 className="text-2xl font-semibold text-gray-800">Partnering with Miners</h2>
-              
-            </div>
-            <p className="" style={{fontSize: '16px', color: '#777777'  }}>
-            By working directly with miners across Africa, we maintain a consistent supply chain, providing customers with guaranteed access to high-quality gold.
-            </p>
-          </div>
-        </motion.div>
 
       </div>
     </motion.div>
@@ -208,6 +164,18 @@ export default function WhyChooseUsPage({
 
           </div>
         </div>      
+
+
+
+        {isMobile ? <div></div> :  <Parallax 
+                imageUrl={goldx2}//"/images/your-image.jpg";
+                    title={"Secure & Reliable Gold Supply Across the Globe"}
+                    subtitle={"Ready to begin your journey with us?"}
+                />}
+
+
+
+
       <Footer 
         isMobile={isMobile} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} closeMenu={closeMenu}
       />

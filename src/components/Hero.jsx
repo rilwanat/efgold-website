@@ -83,7 +83,7 @@ const Hero = ({  }) => {
 
 
       <div className="absolute inset-0 flex flex-col justify-center  text-white px-8 md:px-4 lg:px-16 xl:px-24 2xl:px-80 ">
-        <motion.p
+        <motion.div
           className="text-lg md:text-xl mb-4"
           variants={textVariants}
           initial="initial"
@@ -92,7 +92,7 @@ const Hero = ({  }) => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           {subText[currentImageIndex]}
-        </motion.p>
+        </motion.div>
 
         <motion.h1
           className="text-4xl md:text-6xl font-bold mb-4  md:w-1/2 md:min-h-[200px] text-theme" 

@@ -4,8 +4,13 @@ import { useNavigate } from 'react-router-dom';
 import Header from './navbar/Header';
 import Footer from './navbar/Footer';
 import MenuBar from './navbar/MenuBar';
+
+import Parallax from './Parallax';
 import HeaderParallax from './HeaderParallax';
+
+
 import conference from '../assets/images/conference-wide.jpg';
+import goldx2 from '../assets/images/goldx2.png';
 
 import gold from '../assets/images/gold/gold.jpg';
 import gold1 from '../assets/images/gold/gold1.png';
@@ -656,6 +661,16 @@ style={{
 
           </div>
         </div>      
+
+        {isMobile ? <div></div> :  <Parallax 
+        imageUrl={goldx2}//"/images/your-image.jpg";
+            title={"Secure & Reliable Gold Supply Across the Globe"}
+            subtitle={"Ready to begin your journey with us?"}
+        />}
+
+
+
+
       <Footer 
         isMobile={isMobile} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} closeMenu={closeMenu}
       />

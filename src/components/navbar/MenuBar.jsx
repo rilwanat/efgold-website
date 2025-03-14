@@ -37,10 +37,10 @@ export default function MenuBar({
   const menuItems = [
     { label: 'HOME', href: '/' },
     { label: 'COMPANY', dropdown: [
-      { label: 'About Us', href: '' },
+      { label: 'About Us', href: '/about-us' },
       // { label: 'Our Team', href: '' },
-      { label: 'Why Choose Us', href: '' },
-      { label: 'FAQ', href: '' },
+      { label: 'Why Choose Us', href: '/why-choose-us' },
+      { label: 'FAQ', href: '/faq' },
     ] },
     { label: 'SUBSIDIARIES', dropdown: [
       { label: 'E.F. Network Ltd', href: 'https://eftechnology.net/' },
@@ -53,7 +53,7 @@ export default function MenuBar({
     //   { label: 'Articles', href: '/articles' },
     //   { label: 'Gallery', href: '/gallery' },
     // ] },
-    { label: 'CONTACT', href: '' },
+    { label: 'CONTACT', href: '/contact' },
   ];
   useEffect(() => {
     dropdownRefs.current = menuItems.map(() => React.createRef());
@@ -230,7 +230,7 @@ onMouseLeave={(e) => handleMouseLeave(e)}
                     key={subIndex}
                     href={subItem.href}
                     className="block p-2 hover:bg-theme hover:text-white rounded-sm cursor-pointer" 
-                    target='_blank'
+                    target={`${ item.label == 'COMPANY' || 'CONTACT' ? '' : '_blank'}`}
                   >
                     {subItem.label}
                   </a>

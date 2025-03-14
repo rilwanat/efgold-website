@@ -7,6 +7,9 @@ import MenuBar from './navbar/MenuBar';
 import HeaderParallax from './HeaderParallax';
 import conference from '../assets/images/conference-wide.jpg';
 
+import md from '../assets/images/md.jpg';
+import admin from '../assets/images/admin.jpg';
+
 import gold from '../assets/images/gold/gold.jpg';
 import gold1 from '../assets/images/gold/gold1.png';
 import gold2 from '../assets/images/gold/gold2.png';
@@ -38,7 +41,7 @@ import Hero from './Hero';
 import { motion } from "framer-motion";
 
 
-export default function EFGoldPage({ 
+export default function ContactPage({ 
     isMobile, isMenuOpen, toggleMenu, closeMenu
  }) {
 
@@ -391,11 +394,15 @@ const handleSendMessage = async () => {
         <div className='flex'>
           <div className='w-full rounded-lg'>
 
-          {isMenuOpen ? <div></div> : <Hero/>}
+          {/* {isMenuOpen ? <div></div> : <Hero/>} */}
 
 
           {/* {isMenuOpen ? <div></div> : <HeaderParallax imageUrl={gold} title={"EF Gold"} subtitle={""} />} */}
-          
+          {isMenuOpen ? <div></div> :  <HeaderParallax 
+        imageUrl={admin}//"/images/your-image.jpg";
+            title={"Contact Us"}
+            subtitle={""}
+        />}
           
           
           {/* <HeroGold /> */}
@@ -418,109 +425,6 @@ const handleSendMessage = async () => {
                                                           }}
                                                           >
 
-<motion.div
-      initial={{ opacity: 0, y: 50 }} // Start faded and below
-      animate={{ opacity: 1, y: 0 }} // Fade in and move up
-      transition={{ duration: 0.8, ease: "easeOut", delay: 1.0 }} // Smooth animation
-      className="flex w-full h-full items-center justify-center mt-4"
-    >
-<div>
-<h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">EF Gold</h2>
-
-<p className='my-8' style={{fontSize: '16px', color: '#777777'  }}>
-EF Gold is a global leader in the supply of African gold. With a commitment to excellence and sustainability, we foster economic growth and innovation in the gold trade. We provide secure air transportation for gold from Africa to the rest of the world, excluding sanctioned countries.
-
-With over <strong>17 years</strong> in the gold business, we have served various African nations. Our gold is sold on a <strong>CIF</strong> or <strong>FOB</strong> basis, and we ensure safe air transport to all permitted destinations.</p>
-
-<p className='my-8' style={{fontSize: '16px', color: '#777777'  }}>
-We operate in the following countries: Angola, Benin Republic, Burkina Faso, the Democratic Republic of the Congo (DRC), Equatorial Guinea, Ethiopia, Ghana, Guinea Conakry, Kenya, Liberia, Libya, Mali, Mauritania, Mauritius, Mozambique, Namibia, São Tomé, Senegal, Sierra Leone, South Africa, South Sudan, Tanzania, Togo, Uganda, and Zimbabwe.</p>
-
-<p  className='my-8' style={{fontSize: '16px', color: '#777777'  }}>
-With the capability to charter planes for fast and secure gold deliveries, EF Gold is one of the most efficient and reliable gold suppliers in Africa. We also offer alternative shipping options and can supply anywhere from <strong>10kg to 10 tons</strong> of gold monthly.
-
-By working directly with miners in several African countries, we ensure a consistent and guaranteed supply of gold.
-
-We welcome your inquiries. For additional information, contact us today.</p>
-</div>
-</motion.div>
-
-
-
-
-
-<motion.div
-      initial={{ opacity: 0, y: 50 }} // Start faded and below
-      animate={{ opacity: 1, y: 0 }} // Fade in and move up
-      transition={{ duration: 0.8, ease: "easeOut", delay: 1.5 }} // Smooth animation
-      className="flex w-full h-full items-center justify-center mt-4"
-    >
-      <div className="w-full">
-        <Slider {...settings}>
-          {goldImages.map((image, index) => (
-            <div key={index} className="flex w-full items-center justify-center px-2">
-              <img 
-                src={image} 
-                alt={`Slide ${index + 1}`} 
-                style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
-              />
-            </div>
-          ))}
-        </Slider>
-      </div>
-    </motion.div>
-
-
-
-<div className="video-container" 
-style={{
-  position: "relative",
-  width: "100%",
-  height: "400px",
-  margin: "auto",
-  zIndex: 1, // Lower than navbar
-}}
->
-  
-    <Slider ref={sliderRef} {...settingsVideo}>
-      {videos.map((video, index) => (
-        <div key={index} className="video-slide">
-          <iframe
-            width="100%"
-            height="400px"
-            src={video}
-            title={`YouTube Video ${index + 1}`}
-            frameBorder="0"
-            allow="autoplay; encrypted-media"
-            allowFullScreen 
-            onContextMenu={(e) => e.preventDefault()}
-          ></iframe>
-        </div>
-      ))}
-    </Slider>
-{/* Top Overlay to Hide Branding */}
-<div className=" bg-gray-100" 
-style={{
-  position: "absolute",
-  top: 0,
-  left: 0,
-  width: "100%",
-  height: "70px",
-  // background: "white",
-  zIndex: 10,
-}}></div>
-      {/* Bottom Overlay to Hide Controls */}
-      <div className=" bg-gray-100"
-      style={{
-        position: "absolute",
-        bottom: 0,
-        left: 0,
-        width: "100%",
-        height: "50px",
-        // background: "black",
-        zIndex: 10,
-      }}></div>
-    
-    </div>
 
 
 

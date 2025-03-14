@@ -143,7 +143,7 @@ function MobileMenu({
           animate={isMenuOpen ? "visible" : "hidden"}
           className="text-sm  cursor-pointer block my-4 mx-6"
           onClick={() => {
-            // navigate('/about-us');
+            navigate('/about-us');
             toggleMenu();
           }}
         >
@@ -156,100 +156,33 @@ function MobileMenu({
           animate={isMenuOpen ? "visible" : "hidden"}
           className="text-sm  cursor-pointer block my-4 mx-6"
           onClick={() => {
-            // navigate('/our-team');
-            toggleMenu();
-          }}
-        >
-          Our Team
-        </motion.span>
-
-        <motion.span
-          variants={menuItemVariants}
-          initial="hidden"
-          animate={isMenuOpen ? "visible" : "hidden"}
-          className="text-sm  cursor-pointer block my-4 mx-6"
-          onClick={() => {
-            // navigate('/why-choose-us');
+            navigate('/why-choose-us');
             toggleMenu();
           }}
         >
           Why Choose Us
         </motion.span>
 
-        {/* <motion.span
-          variants={menuItemVariants}
-          initial="hidden"
-          animate={isMenuOpen ? "visible" : "hidden"}
-          className="text-sm  cursor-pointer block my-4 mx-6"
-          onClick={() => {
-            navigate('/why-choose-us');
-            toggleMenu();
-          }}
-        >
-          Careers
-        </motion.span> */}
-
-        {/* <motion.span
-          variants={menuItemVariants}
-          initial="hidden"
-          animate={isMenuOpen ? "visible" : "hidden"}
-          className="text-sm  cursor-pointer block my-4 mx-6"
-          onClick={() => {
-            // navigate('/about-us');
-            toggleMenu();
-          }}
-        >
-          FAQ
-        </motion.span> */}
-
-        {/* <motion.span
-          variants={menuItemVariants}
-          initial="hidden"
-          animate={isMenuOpen ? "visible" : "hidden"}
-          className="text-sm  cursor-pointer block my-4 mx-6"
-          onClick={() => {
-            // navigate('/about-us');
-            toggleMenu();
-          }}
-        >
-          Products
-        </motion.span> */}
-
         <motion.span
           variants={menuItemVariants}
           initial="hidden"
           animate={isMenuOpen ? "visible" : "hidden"}
-          className="text-sm  cursor-pointer block my-4 mx-6 "
+          className="text-sm  cursor-pointer block my-4 mx-6"
           onClick={() => {
-            // navigate('/ef-gold');
+            navigate('/faq');
             toggleMenu();
           }}
         >
-          EF Gold
+          Faq
         </motion.span>
 
-
-        {/* <motion.span
-          variants={menuItemVariants}
-          initial="hidden"
-          animate={isMenuOpen ? "visible" : "hidden"}
-          className="text-sm  cursor-pointer block my-4 mx-6"
-          onClick={() => {
-            // navigate('/about-us');
-            toggleMenu();
-          }}
-        >
-          Businesses
-        </motion.span> */}
-
-
         <motion.span
           variants={menuItemVariants}
           initial="hidden"
           animate={isMenuOpen ? "visible" : "hidden"}
           className="text-sm  cursor-pointer block my-4 mx-6"
           onClick={() => {
-            // navigate('/contact');
+            navigate('/contact');
             toggleMenu();
           }}
         >

@@ -22,6 +22,7 @@ $address = $_POST['address'] ?? '';
 $phoneNumber = $_POST['phone_number'] ?? '';
 $email = $_POST['email'] ?? '';
 $contactName = $_POST['contact_name'] ?? '';
+$procurementProcedure = $_POST['procurement_procedure'] ?? '';
 $remark = $_POST['remark'] ?? '';
 $productsOfInterest = $_POST['prodcts_of_interest'] ?? '';
 
@@ -50,7 +51,7 @@ try {
 
     // Email Subject & Body
     $mail->Subject = 'EF Gold Contact Form Submission';
-    $mail->Body = "Company Name: $companyName\nAddress: $address\nPhone: $phoneNumber\nEmail: $email\nContact Name: $contactName\nRemark: $remark\nProducts of Interest: $productsOfInterest";
+    $mail->Body = "Company Name: $companyName\nAddress: $address\nPhone: $phoneNumber\nEmail: $email\nContact Name: $contactName\nRemark: $remark\nProducts of Interest: $productsOfInterest\nProcurement Procedure: $procurementProcedure";
 
     // Handle file attachment
     if (!empty($_FILES['upload_file']['name'])) {

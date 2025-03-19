@@ -561,7 +561,7 @@ const handleSendMessage = async () => {
             />
           </div>  
 
-          <div className='flex flex-col sm:flex-row relative  '>
+          {/* <div className='flex flex-col sm:flex-row relative  '>
             <input
               type='file'
               ref={fileInputRef}
@@ -570,15 +570,16 @@ const handleSendMessage = async () => {
               onChange={(e) => setFile(e.target.files[0])} // Store the selected file
               style={{  }}
             />
-          </div> 
+          </div>  */}
 
           <div className='flex flex-col sm:flex-row relative '>
-            <input
+            <textarea
               type='text'
-              placeholder='Type in your remark*'
+              placeholder='Kindly tell us what you want and your procedure*'
               className='pl-4 border border-gray-300 rounded-sm py-2 px-2 w-full my-2 bg-white'
               value={remark}
           onChange={(e) => setRemark(e.target.value)}
+          rows="4"
               style={{  }}
             />
           </div> 

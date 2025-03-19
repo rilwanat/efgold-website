@@ -46,7 +46,7 @@ export default function MenuBar({
       { label: 'E.F. Network Ltd', href: 'https://eftechnology.net/' },
       { label: 'E.F. Waste Management Ltd', href: 'https://efwaste.com/' },
       { label: 'E.F. Skyview Ltd', href: 'https://efskyview.com/' },
-      { label: 'Gabtaxi', href: 'https://gabtaxi.com/' },
+      { label: 'Gabtaxi Ltd', href: 'https://gabtaxi.com/' },
     ] },
     // { label: 'MEDIA', dropdown: [
     //   { label: 'News', href: '/news' },

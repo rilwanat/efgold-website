@@ -29,7 +29,7 @@ const Hero = ({  }) => {
 
   
   const subText = [
-    'Your Most Reliable and Trusted Source For Quality Africa Gold. We specialize in selling premium Africa gold products, ensuring authenticity and value for our customers.',
+    'Your most reliable and trusted source for quality Africa gold. We specialize in selling premium Africa gold products, ensuring authenticity and value for our customers.',
     // 'Welcome to E.F Gold',
     // 'Secure & Efficient Gold Transactions',
     // 'Reliable Gold Supply Across Africa',

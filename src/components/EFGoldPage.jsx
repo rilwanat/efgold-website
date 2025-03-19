@@ -559,7 +559,7 @@ By working directly with miners in several African countries, we ensure a consis
 
 We welcome your inquiries.</p>
 
-<p className='mb-8' style={{fontSize: '18px', color: '#000000'  }}>For additional information, <strong><a className='cursor-pointer' onClick={() => {navigateTo('/buy-gold')}}>contact</a></strong> us today.</p>
+<p className='mb-8' style={{fontSize: '18px', color: '#000000'  }}>For additional information, <strong><a className='cursor-pointer text-green-600' onClick={() => {navigateTo('/buy-gold')}}>contact</a></strong> us today.</p>
 
 <div className='mb-8 flex items-center bg-theme rounded-lg px2 justify-center text-bold hover:text-theme hover:bg-black cursor-pointer'
     style={{ height: '40px', width: '160px'}}    
@@ -874,7 +874,7 @@ style={{
               style={{  }}
             />
           </div>  
-
+{/* 
           <div className='flex flex-col sm:flex-row relative  '>
             <input
               type='file'
@@ -885,15 +885,16 @@ style={{
               onChange={handleFileChange}
               style={{  }}
             />
-          </div> 
+          </div>  */}
 
           <div className='flex flex-col sm:flex-row relative '>
-            <input
+            <textarea
               type='text'
-              placeholder='Type in your remark*'
+              placeholder='Kindly tell us what you want and your procedure*'
               className='pl-4 border border-gray-300 rounded-sm py-2 px-2 w-full my-2 bg-white'
               value={remark}
           onChange={(e) => setRemark(e.target.value)}
+          rows="4"
               style={{  }}
             />
           </div> 

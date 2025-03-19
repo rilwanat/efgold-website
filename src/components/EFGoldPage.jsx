@@ -83,6 +83,34 @@ export default function EFGoldPage({
   };
 
 
+  const [filePreview, setFilePreview] = useState(null);
+  const fileInputRef = useRef(null);
+  const handleDivClick = () => {
+    if (fileInputRef.current) {
+      fileInputRef.current.click(); 
+    }
+  };
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setFile(file); // Store the file in state
+      const previewURL = URL.createObjectURL(file); // Generate a preview URL
+      setFilePreview(previewURL); 
+    }
+  };
+
+  // Clean up the object URL when the component unmounts
+  React.useEffect(() => {
+    return () => {
+      if (filePreview) {
+        URL.revokeObjectURL(filePreview);
+      }
+    };
+  }, [filePreview]);
+
+
+
   //notification modal
   const [notificationType, setNotificationType] = useState(false);
   const [notificationTitle, setNotificationTitle] = useState("");
@@ -506,7 +534,7 @@ const toggleFAQ = (index) => {
             <div className='bg-theme mb-2' style={{ width: '80px', height: '4px' }}></div>
           </div>
 
-<div className='flex flex-col sm:flex-row relative'>
+<div className='flex flex-col lg:flex-row relative'>
 
 
 
@@ -527,11 +555,11 @@ We operate in the following countries: Angola, Benin Republic, Burkina Faso, the
 <p  className='my-8' style={{fontSize: '18px', color: '#000000'  }}>
 With the capability to charter planes for fast and secure gold deliveries, EF Gold is one of the most efficient and reliable gold suppliers in Africa. We also offer alternative shipping options and can supply anywhere from <strong>10kg to 10 tons</strong> of gold monthly.
 
-By working directly with miners in several African countries, we ensure a consistent and guaranteed supply of gold.
+By working directly with miners in several African countries, we ensure a consistent and guarantee the supply of gold.
 
 We welcome your inquiries.</p>
 
-<p className='mb-8' style={{fontSize: '18px', color: '#000000'  }}>For additional information, contact us today.</p>
+<p className='mb-8' style={{fontSize: '18px', color: '#000000'  }}>For additional information, <strong><a className='cursor-pointer' onClick={() => {navigateTo('/buy-gold')}}>contact</a></strong> us today.</p>
 
 <div className='mb-8 flex items-center bg-theme rounded-lg px2 justify-center text-bold hover:text-theme hover:bg-black cursor-pointer'
     style={{ height: '40px', width: '160px'}}    
@@ -850,9 +878,11 @@ style={{
           <div className='flex flex-col sm:flex-row relative  '>
             <input
               type='file'
+              ref={fileInputRef}
               placeholder='Select File*'
               className='pl-4 border border-gray-300 rounded-sm py-2 px-2 w-full my-2  cursor-pointer bg-white'
-              onChange={(e) => setFile(e.target.files[0])} // Store the selected file
+              // onChange={(e) => setFile(e.target.files[0])} // Store the selected file
+              onChange={handleFileChange}
               style={{  }}
             />
           </div> 
@@ -869,14 +899,56 @@ style={{
           </div> 
 
 
+          <div className='flex flex-col sm:flex-row relative'>
           <div 
               onClick={() => { handleSendMessage() }}
-              style={{ borderWidth: '0px', width: '200px', color: '#424218' }}
-              className='mt-4  text-center rounded-sm px-4 py-2  text-sm cursor-pointer mb-20 bg-theme hover:text-theme hover:bg-black'>
+              style={{ borderWidth: '0px', width: '200px' }}
+              className='mt-4 mr-4 text-center rounded-sm px-4 py-2  text-sm cursor-pointer mb-20 bg-theme hover:text-theme hover:bg-black'>
               {isMessageSending ? 'Please wait..' : 'Send Message'} 
             </div>
 
+            <div 
+              onClick={handleDivClick}
+              style={{ borderWidth: '0px', width: '200px' }}
+              className='mt-4  text-center rounded-sm px-4 py-2  text-sm cursor-pointer mb-20 bg-theme hover:text-theme hover:bg-black'>
+              Attach File
+            </div>
+          </div>
+
+
+
+
+          {/* Display the file preview */}
+{filePreview && (
+        <div className='mt-0'>
+          <h3 className='text-lg font-semibold mb-2'>File Preview:</h3>
+          {file.type.startsWith('image/') ? (
+            // Display image preview
+            <img
+              src={filePreview}
+              alt='File Preview'
+              className='max-w-full h-auto rounded-lg shadow-md'
+              style={{ maxHeight: '300px' }}
+            />
+          ) : file.type === 'application/pdf' ? (
+            // Display PDF preview using an iframe
+            <iframe
+              src={filePreview}
+              title='PDF Preview'
+              className='w-full h-96 rounded-lg shadow-md'
+            />
+          ) : (
+            // Display a generic message for unsupported file types
+            <p className='text-gray-600'>
+              Preview not available for this file type.
+            </p>
+          )}
+        </div>
+      )}
+
       </div>
+
+
 
 
 

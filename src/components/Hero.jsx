@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
+import logo from '../assets/images/logo.png';
+
 
 import hero1 from '../assets/images/hero/hero1.jpg';
 import hero2 from '../assets/images/hero/hero2.jpg';
@@ -61,80 +63,66 @@ const Hero = ({  }) => {
   }
 
   return (
-    <div className="relative w-full h-[640px] overflow-hidden">
+    <div className="relative w-full h-[640px] overflow-hidden bg-black">
 
-      <AnimatePresence>
-        <motion.img
-          key={images[currentImageIndex]}
-          src={images[currentImageIndex]}
-          alt="Hero"
-          className="absolute inset-0 w-full h-full object-cover"
-          variants={imageVariants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          transition={{ duration: 3.5 }}
-        />
-      </AnimatePresence>
-
-      <div className="absolute inset-0 bg-black opacity-50 flex flex-col justify-center items-center p-4">
-        {/* <h2 className="text-3xl font-bold mb-2 z-1000">{title}</h2>
-        <p className="text-lg z-1000">{subtitle}</p> */}
-      </div>
-
-
-      <div className="absolute inset-0 flex flex-col justify-center  text-white px-8 md:px-4 lg:px-16 xl:px-24 2xl:px-80 ">
-        
-
-        <motion.h1
-          className="text-4xl md:text-6xl font-bold mb-4  md:w-1/2 md:min-h-[80px] text-theme" 
-          style={{  }}
-          variants={textVariants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          transition={{ duration: 0.8 }}
-        >
-          {headerText[currentImageIndex]}
-        </motion.h1>
-
-        <motion.div
-          className="text-lg md:text-xl mb-8 md:w-1/2"
-          variants={textVariants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          {subText[currentImageIndex]}
-        </motion.div>
-
-        <motion.div
-          className="flex "
-          variants={textVariants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <div className='mb-8 flex items-center bg-black border-2 border-white rounded-lg px2 justify-center text-bold mr-4  cursor-pointer hover:text-black hover:bg-theme'
-    style={{ height: '40px', width: '160px'}}    
+  {/* Text Content */}
+  <div className="absolute inset-0 flex flex-col justify-center text-white px-8 md:px-4 lg:px-16 xl:px-24 2xl:px-80">
+    <motion.h1
+      className="text-4xl md:text-6xl font-bold mb-4 md:w-1/2 md:min-h-[80px] text-theme"
+      variants={textVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition={{ duration: 0.8 }}
     >
-      Learn More
-    </div>
-    <div className='mb-8 flex items-center bg-theme rounded-lg px2 justify-center text-bold text-black  cursor-pointer hover:text-theme hover:bg-black'
-    style={{ height: '40px', width: '160px'}} 
-    onClick={() => {navigateTo('/buy-gold');}}   
+      {headerText[currentImageIndex]}
+    </motion.h1>
+
+    <motion.div
+      className="text-lg md:text-xl mb-8 md:w-1/2"
+      variants={textVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition={{ duration: 0.8, delay: 0.2 }}
     >
-      Buy Gold
-    </div>
-        </motion.div>
+      {subText[currentImageIndex]}
+    </motion.div>
 
-        
-
-        
+    <motion.div
+      className="flex"
+      variants={textVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition={{ duration: 0.8, delay: 0.2 }}
+    >
+      <div className='mb-8 flex items-center bg-black border-2 border-white rounded-lg px-2 justify-center text-bold mr-4 cursor-pointer hover:text-black hover:bg-theme'
+        style={{ height: '40px', width: '160px' }}
+      >
+        Learn More
       </div>
+      <div className='mb-8 flex items-center bg-theme rounded-lg px-2 justify-center text-bold text-black cursor-pointer hover:text-theme hover:bg-black'
+        style={{ height: '40px', width: '160px' }}
+        onClick={() => { navigateTo('/buy-gold'); }}
+      >
+        Buy Gold
+      </div>
+    </motion.div>
+  </div>
+
+  {/* Image Content */}
+  <div className='lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/3 flex items-center justify-center pr-8 md:pr-4 lg:pr-16 xl:pr-24 2xl:pr-80'>
+    <div className="flex w-full items-center justify-center px-2">
+      <img
+        src={logo}
+        className='rounded-lg'
+        style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
+        alt="Hero Image"
+      />
     </div>
+  </div>
+</div>
   );
 };
 

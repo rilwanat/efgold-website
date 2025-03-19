@@ -145,8 +145,18 @@ export default function EFGoldPage({
     getEmbedUrl("https://www.youtube.com/watch?v=VD5CKXT3JXA"),
 
     getEmbedUrl("https://www.youtube.com/watch?v=NV5U60vcIbE"),
-    getEmbedUrl("https://www.youtube.com/watch?v=PFdgBl8HTAw")
-    
+    getEmbedUrl("https://www.youtube.com/watch?v=PFdgBl8HTAw"),
+
+    getEmbedUrl("https://www.youtube.com/watch?v=_rHbfCgXteI"),
+    getEmbedUrl("https://www.youtube.com/watch?v=7VObWaBbVIY"),
+    getEmbedUrl("https://www.youtube.com/watch?v=eCdu8E8jyiU"),
+    getEmbedUrl("https://www.youtube.com/watch?v=S4rKsD_GAaY"),
+    getEmbedUrl("https://www.youtube.com/watch?v=3nWQTEX7Xs0"),
+    getEmbedUrl("https://www.youtube.com/watch?v=ytQaSh7NMpc"),
+    getEmbedUrl("https://www.youtube.com/watch?v=b0E-ewnrhiI"),
+    getEmbedUrl("https://www.youtube.com/watch?v=HDGgMhByj8M"),
+    getEmbedUrl("https://www.youtube.com/watch?v=qsLGYeQWT0Y"),
+
   ];
   const settingsVideo = {
     dots: true,
@@ -735,8 +745,8 @@ We welcome your inquiries.</p>
 <div className="video-container" 
 style={{
   position: "relative",
-  width: "100%",
-  height: "400px",
+  width: "380px",
+  height: "700px",
   margin: "auto",
   zIndex: 1, // Lower than navbar
 }}
@@ -746,8 +756,8 @@ style={{
       {videos.map((video, index) => (
         <div key={index} className="video-slide">
           <iframe
-            width="100%"
-            height="400px"
+            width="380px"
+            height="700px"
             src={video}
             title={`YouTube Video ${index + 1}`}
             frameBorder="0"
@@ -770,7 +780,7 @@ style={{
   zIndex: 10,
 }}></div>
       {/* Bottom Overlay to Hide Controls */}
-      <div className=" bg-gray-100"
+      {/* <div className=" bg-gray-100"
       style={{
         position: "absolute",
         bottom: 0,
@@ -779,7 +789,7 @@ style={{
         height: "50px",
         // background: "black",
         zIndex: 10,
-      }}></div>
+      }}></div> */}
     
     </div>
 

@@ -79,7 +79,9 @@ const Hero = ({  }) => {
 
       <div className="absolute inset-0 bg-black opacity-50 flex flex-col justify-center items-center p-4">
         {/* <h2 className="text-3xl font-bold mb-2 z-1000">{title}</h2>
-        <p className="text-lg z-1000">{subtitle}</p> */}
+        <p className="text-lg z-1000">{subtitle}</p>  */}
+
+        {/* ll */}
       </div>
 
 

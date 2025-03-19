@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
 import logo from '../assets/images/logo.png';
-
+import goldBar from '../assets/images/hero-image.png';
 
 import hero1 from '../assets/images/hero/hero1.jpg';
 import hero2 from '../assets/images/hero/hero2.jpg';
@@ -114,14 +114,34 @@ const Hero = ({  }) => {
   {/* Image Content */}
   <div className='lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/3 flex items-center justify-center pr-8 md:pr-4 lg:pr-16 xl:pr-24 2xl:pr-80'>
     <div className="flex w-full items-center justify-center px-2">
+    <motion.div className=""
+        initial={{ opacity: 1 }}
+        animate={{ y: [0, -15, 0] }} // Moves up and down
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        >
       <img
-        src={logo}
+        src={goldBar}
         className='rounded-lg'
         style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
         alt="Hero Image"
       />
+      </motion.div>
     </div>
   </div>
+  {/* <motion.div className="md:w-1/2 mt-10 md:mt-0"
+        initial={{ opacity: 1 }}
+        animate={{ y: [0, -15, 0] }} // Moves up and down
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <img
+            src={heroImage}
+            alt="EF Gold"
+            className="w-2/3 rounded-md items-center mx-auto"
+          />
+        </motion.div> */}
+
+
+
 </div>
   );
 };

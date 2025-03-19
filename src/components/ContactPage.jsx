@@ -10,6 +10,8 @@ import conference from '../assets/images/conference-wide.jpg';
 import md from '../assets/images/md.jpg';
 import admin from '../assets/images/admin.jpg';
 
+import goldx2 from '../assets/images/goldx2.png';
+
 import gold from '../assets/images/gold/gold.jpg';
 import gold1 from '../assets/images/gold/gold1.png';
 import gold2 from '../assets/images/gold/gold2.png';
@@ -44,6 +46,11 @@ import { motion } from "framer-motion";
 export default function ContactPage({ 
     isMobile, isMenuOpen, toggleMenu, closeMenu
  }) {
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+    
 
   const [isPlaying, setIsPlaying] = useState(false);
   const sliderRef = useRef(null);
@@ -399,7 +406,7 @@ const handleSendMessage = async () => {
 
           {/* {isMenuOpen ? <div></div> : <HeaderParallax imageUrl={gold} title={"EF Gold"} subtitle={""} />} */}
           {isMenuOpen ? <div></div> :  <HeaderParallax 
-        imageUrl={admin}//"/images/your-image.jpg";
+        imageUrl={goldx2}//"/images/your-image.jpg";
             title={"Contact Us"}
             subtitle={""}
         />}
@@ -430,13 +437,13 @@ const handleSendMessage = async () => {
 
 
  
-          <div className='flex flex-col justify-center mt-8 mb-2'>
-            <p className=' mb-2' style={{ color: '', fontWeight: '600', fontSize: '24px' }}>Send us a message</p>
+<div className='flex flex-col items-center justify-center mt-16 mb-2'>
+            <p className=' mb-2' style={{ color: '', fontWeight: '700', fontSize: '24px' }}>Contact Us</p>
             <div className='bg-theme mb-2' style={{ width: '80px', height: '4px' }}></div>
           </div>
 
-          <p className=' mb-2' style={{fontSize: '16px', color: '#777777'  }}>Fill the form below to contact us and we will get back to you as soon as possible.</p>
-          {/* <p className=' mb-2' style={{fontSize: '16px', color: '#777777'  }}>Select product(s) of interest:</p> */}
+          <p className='flex justify-center mb-2' style={{fontSize: '16px', color: '#000000'  }}>Fill the form below to contact us and we will get back to you.</p>
+          {/* <p className=' mb-2' style={{fontSize: '16px',   }}>Select product(s) of interest:</p> */}
           
 {/*           
           <div>

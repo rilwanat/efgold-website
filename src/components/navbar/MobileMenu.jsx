@@ -6,6 +6,7 @@ import stars from '../../assets/images/stars.png';
 import appStore from '../../assets/svg/app-store-badge.svg';
 import playStore from '../../assets/svg/play-store-badge.svg';
 
+import Footer from './Footer';
 
 import styles from './MobileNavbar.module.css';
 import { NavLink } from 'react-router-dom';
@@ -102,7 +103,7 @@ function MobileMenu({
   >
     <MenuContent className=''>
       <div className=''>
-        <div className='flex justify-between items-center pl-4 pr-8  bg-gradient-to-r from-theme to-white shadow-lg'>
+        <div className='flex justify-between items-center pl-4 pr-8  bg-gradient-to-r from-darkTheme to-theme shadow-lg'>
 
           <div className='flex items-center'>
           <img
@@ -115,7 +116,7 @@ function MobileMenu({
           }}
             style={{ cursor: 'pointer' }}
           />
-          <div className='' style={{ fontWeight: '600', cursor: 'pointer', }}>E.F GOLD</div>
+          <div className='text-theme text-lg' style={{ fontWeight: '600', cursor: 'pointer', }}>E.F GOLD</div>
 
           </div>
 
@@ -141,7 +142,7 @@ function MobileMenu({
           variants={menuItemVariants}
           initial="hidden"
           animate={isMenuOpen ? "visible" : "hidden"}
-          className="text-sm  cursor-pointer block my-4 mx-6"
+          className="text-lg bg-theme rounded-lg py-2 px-4 cursor-pointer block mt-8 my-4 mx-4"
           onClick={() => {
             navigate('/about-us');
             toggleMenu();
@@ -150,24 +151,24 @@ function MobileMenu({
           About Us
         </motion.span>
 
-        <motion.span
+        {/* <motion.span
           variants={menuItemVariants}
           initial="hidden"
           animate={isMenuOpen ? "visible" : "hidden"}
-          className="text-sm  cursor-pointer block my-4 mx-6"
+          className="text-lg bg-theme rounded-lg py-2 px-4 cursor-pointer block my-4 mx-4"
           onClick={() => {
             navigate('/why-choose-us');
             toggleMenu();
           }}
         >
           Why Choose Us
-        </motion.span>
+        </motion.span> */}
 
         <motion.span
           variants={menuItemVariants}
           initial="hidden"
           animate={isMenuOpen ? "visible" : "hidden"}
-          className="text-sm  cursor-pointer block my-4 mx-6"
+          className="text-lg bg-theme rounded-lg py-2 px-4 cursor-pointer block my-4 mx-4"
           onClick={() => {
             navigate('/faq');
             toggleMenu();
@@ -180,13 +181,26 @@ function MobileMenu({
           variants={menuItemVariants}
           initial="hidden"
           animate={isMenuOpen ? "visible" : "hidden"}
-          className="text-sm  cursor-pointer block my-4 mx-6"
+          className="text-lg bg-theme rounded-lg py-2 px-4 cursor-pointer block my-4 mx-4"
           onClick={() => {
             navigate('/contact');
             toggleMenu();
           }}
         >
           Contact
+        </motion.span>
+
+        <motion.span
+          variants={menuItemVariants}
+          initial="hidden"
+          animate={isMenuOpen ? "visible" : "hidden"}
+          className="text-lg bg-theme rounded-lg py-2 px-4 cursor-pointer block my-4 mx-4"
+          onClick={() => {
+            navigate('/buy-gold');
+            toggleMenu();
+          }}
+        >
+          Buy Gold
         </motion.span>
         </div>
         

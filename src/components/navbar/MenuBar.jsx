@@ -28,7 +28,7 @@ export default function MenuBar({
   isMobile, isMenuOpen, toggleMenu, closeMenu
  }) {
 
-
+  const navigate = useNavigate();
 
     
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -39,7 +39,7 @@ export default function MenuBar({
     { label: 'COMPANY', dropdown: [
       { label: 'About Us', href: '/about-us' },
       // { label: 'Our Team', href: '' },
-      { label: 'Why Choose Us', href: '/why-choose-us' },
+      // { label: 'Why Choose Us', href: '/why-choose-us' },
       { label: 'FAQ', href: '/faq' },
     ] },
     { label: 'SUBSIDIARIES', dropdown: [
@@ -86,7 +86,9 @@ export default function MenuBar({
   };
   
   
-
+  const navigateTo = (route) => {
+    navigate(route);
+  }
 
 
   return (
@@ -107,7 +109,7 @@ onMouseLeave={(e) => handleMouseLeave(e)}
 
                   <a href='/'>
                   <img
-                    className="block h-20 w-auto max-w-none"
+                    className="block h-28 w-auto max-w-none"
                     src={logo}
                     alt="Logo"
                     onClick={() => {  }}
@@ -178,7 +180,7 @@ onMouseLeave={(e) => handleMouseLeave(e)}
 
 
         
-                  <div className='ml-0 '>
+                  <div className='flex ml-0 '>
                   <div 
                   
                   className="flex w-full items-center z-50" style={{ height: '40px' }}>
@@ -190,7 +192,7 @@ onMouseLeave={(e) => handleMouseLeave(e)}
           onMouseLeave={() => handleMouseLeave(index)}
         >
           <a
-            className="text-sm text-white cursor-pointer"
+            className="text-sm text-white cursor-pointer hover:text-theme"
             style={{ fontWeight: '400', cursor: 'pointer' }}
             href={item.href}
           >
@@ -242,7 +244,22 @@ onMouseLeave={(e) => handleMouseLeave(e)}
         </div>
       ))}
     </div>
+
+    <div className='ml-2 flex items-center bg-theme rounded-lg px2 justify-center text-bold cursor-pointer hover:text-theme hover:bg-black'
+    style={{ width: '160px'}}    
+    onClick={() => {navigateTo('/buy-gold');}}  
+    >
+      Buy Gold
+    </div>
+
+    
+    
+ 
+
+
+
                   </div>
+                  
                 </div>
         
                 

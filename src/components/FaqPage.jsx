@@ -44,6 +44,11 @@ export default function FaqPage({
  }) {
 
 
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
+
   //notification modal
   const [notificationType, setNotificationType] = useState(false);
   const [notificationTitle, setNotificationTitle] = useState("");
@@ -145,7 +150,7 @@ export default function FaqPage({
           transition={{ delay: 0.4, duration: 0.5 }}
           className="text-lg text-gray-600 mb-6"
         >
-         {/* <p className='mb-8' style={{fontSize: '16px', color: '#777777'  }}>
+         {/* <p className='mb-8' style={{fontSize: '16px',   }}>
          EF Gold is a global leader in the supply of African gold, committed to excellence and sustainability. With over 17 years of experience, we drive economic growth and innovation in the gold trade.
          </p> */}
 

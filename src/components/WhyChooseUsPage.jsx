@@ -43,6 +43,11 @@ export default function WhyChooseUsPage({
  }) {
 
 
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
+
   //notification modal
   const [notificationType, setNotificationType] = useState(false);
   const [notificationTitle, setNotificationTitle] = useState("");

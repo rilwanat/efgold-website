@@ -1,9 +1,23 @@
 @import "tailwindcss";
 
 @theme{
-    --color-theme: #DCC00A;
+    --color-theme: #FFD700;
     --color-darkTheme: #1D2024;
     --color-darkBackground: #26221F;
-    --color-darkGreyBack: #1D2024;
+    --color-darkGreyBack: #000000;
     
 }
+
+
+
+
+
+
+
+/* Disable text selection */
+body {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Standard syntax */
+  }

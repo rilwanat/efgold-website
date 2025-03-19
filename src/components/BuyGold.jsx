@@ -4,12 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import Header from './navbar/Header';
 import Footer from './navbar/Footer';
 import MenuBar from './navbar/MenuBar';
-
-import Parallax from './Parallax';
 import HeaderParallax from './HeaderParallax';
-
-
 import conference from '../assets/images/conference-wide.jpg';
+
+import md from '../assets/images/md.jpg';
+import admin from '../assets/images/admin.jpg';
+
 import goldx2 from '../assets/images/goldx2.png';
 
 import gold from '../assets/images/gold/gold.jpg';
@@ -27,7 +27,6 @@ import gold11 from '../assets/images/gold/gold11.png';
 import gold12 from '../assets/images/gold/gold12.png';
 
 import logo from '../assets/images/logo.png';
-import goldBar from '../assets/images/gold-bar.png';
 
 
 import background from '../assets/images/background.png';
@@ -41,36 +40,19 @@ import 'slick-carousel/slick/slick-theme.css';
 import NotificationModal from './modals/NotificationModal';
 
 import Hero from './Hero';
-import { motion, AnimatePresence  } from "framer-motion";
+import { motion } from "framer-motion";
 
 
-
-
-import LocationSearchingIcon from '@mui/icons-material/LocationSearching';
-import CampaignIcon from '@mui/icons-material/Campaign';
-import SpeakerPhoneIcon from '@mui/icons-material/SpeakerPhone';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import NetworkWifiIcon from '@mui/icons-material/NetworkWifi';
-import SecurityIcon from '@mui/icons-material/Security';
-
-
-import ShieldIcon from '@mui/icons-material/Shield';
-import DiamondIcon from '@mui/icons-material/Diamond';
-import HandshakeIcon from '@mui/icons-material/Handshake';
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
-
-
-export default function EFGoldPage({ 
+export default function BuyGold({ 
     isMobile, isMenuOpen, toggleMenu, closeMenu
  }) {
 
-  const navigate = useNavigate();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
-
+    
   const [isPlaying, setIsPlaying] = useState(false);
   const sliderRef = useRef(null);
   const handlePlay = () => {
@@ -114,10 +96,6 @@ export default function EFGoldPage({
     getEmbedUrl("https://www.youtube.com/watch?v=uTZT9XUGFvE"),
     getEmbedUrl("https://www.youtube.com/watch?v=QzooAJ3f4T8"),
     getEmbedUrl("https://www.youtube.com/watch?v=VD5CKXT3JXA"),
-
-    getEmbedUrl("https://www.youtube.com/watch?v=NV5U60vcIbE"),
-    getEmbedUrl("https://www.youtube.com/watch?v=PFdgBl8HTAw")
-    
   ];
   const settingsVideo = {
     dots: true,
@@ -394,47 +372,6 @@ const handleSendMessage = async () => {
 
 
 
-const navigateTo = (route) => {
-  navigate(route);
-}
-
-
-
-
-
-
-
-const [openIndex, setOpenIndex] = useState(null); // Track which FAQ is open
-
-const faqs = [
-  {
-    question: "What is EF Gold?",
-    answer: "EF Gold is a trusted company that specializes in selling high-quality gold products.",
-  },
-  {
-    question: "Do you offer worldwide delivery?",
-    answer: "Yes, we offer worldwide delivery for all our products.",
-  },
-  {
-    question: "Can I visit your physical store?",
-    answer: "Yes, you can visit our physical store. Please check our website for store locations and hours.",
-  },
-  {
-    question: "What payment methods do you accept?",
-    answer: "We accept various payment methods including Bank transfers, USDT, and MT103.",
-  },
-];
-
-const toggleFAQ = (index) => {
-  setOpenIndex(openIndex === index ? null : index); // Toggle the clicked FAQ
-};
-
-
-
-
-
-
-
 
 
 
@@ -465,11 +402,15 @@ const toggleFAQ = (index) => {
         <div className='flex'>
           <div className='w-full rounded-lg'>
 
-          {isMenuOpen ? <div></div> : <Hero/>}
+          {/* {isMenuOpen ? <div></div> : <Hero/>} */}
 
 
           {/* {isMenuOpen ? <div></div> : <HeaderParallax imageUrl={gold} title={"EF Gold"} subtitle={""} />} */}
-          
+          {isMenuOpen ? <div></div> :  <HeaderParallax 
+        imageUrl={goldx2}//"/images/your-image.jpg";
+            title={"Buy Gold"}
+            subtitle={""}
+        />}
           
           
           {/* <HeroGold /> */}
@@ -492,269 +433,12 @@ const toggleFAQ = (index) => {
                                                           }}
                                                           >
 
-<motion.div
-      initial={{ opacity: 0, y: 50 }} // Start faded and below
-      animate={{ opacity: 1, y: 0 }} // Fade in and move up
-      transition={{ duration: 0.8, ease: "easeOut", delay: 1.0 }} // Smooth animation
-      className="flex flex-col w-full h-full items-center justify-center mt-4"
-    >
-
-
-
-<div className='flex flex-col items-center justify-center mt-16 mb-2'>
-            <p className=' mb-2' style={{ color: '', fontWeight: '700', fontSize: '28px' }}>About Us</p>
-            <div className='bg-theme mb-2' style={{ width: '80px', height: '4px' }}></div>
-          </div>
-
-<div className='flex flex-col sm:flex-row relative'>
-
-
-
-
-<div className='md:w-4/5'>
-
-
-
-
-<p className='my-8 pt-2' style={{fontSize: '18px', color: '#000000'  }}>
-EF Gold is a global leader in the supply of African gold. With a commitment to excellence and sustainability, we foster economic growth and innovation in the gold trade. We provide secure air transportation for gold from Africa to the rest of the world, excluding sanctioned countries.
-
-With over <strong>17 years</strong> in the gold business, we have served various African nations. Our gold is sold on a <strong>CIF</strong> or <strong>FOB</strong> basis, and we ensure safe air transport to all permitted destinations.</p>
-
-<p className='my-8' style={{fontSize: '18px', color: '#000000'  }}>
-We operate in the following countries: Angola, Benin Republic, Burkina Faso, the Democratic Republic of the Congo (DRC), Equatorial Guinea, Ethiopia, Ghana, Guinea Conakry, Kenya, Liberia, Libya, Mali, Mauritania, Mauritius, Mozambique, Namibia, São Tomé, Senegal, Sierra Leone, South Africa, South Sudan, Tanzania, Togo, Uganda, and Zimbabwe.</p>
-
-<p  className='my-8' style={{fontSize: '18px', color: '#000000'  }}>
-With the capability to charter planes for fast and secure gold deliveries, EF Gold is one of the most efficient and reliable gold suppliers in Africa. We also offer alternative shipping options and can supply anywhere from <strong>10kg to 10 tons</strong> of gold monthly.
-
-By working directly with miners in several African countries, we ensure a consistent and guaranteed supply of gold.
-
-We welcome your inquiries.</p>
-
-<p className='mb-8' style={{fontSize: '18px', color: '#000000'  }}>For additional information, contact us today.</p>
-
-<div className='mb-8 flex items-center bg-theme rounded-lg px2 justify-center text-bold hover:text-theme hover:bg-black cursor-pointer'
-    style={{ height: '40px', width: '160px'}}    
-    onClick={() => {navigateTo('/buy-gold');}}  
-    >
-      Buy Gold
-    </div>
-
-</div>
-
-
-
-
-<div  className="flex w-full items-center justify-center px-2">
-              <img 
-                src={goldBar} 
-                // alt={`Slide ${index + 1}`} 
-                className='ml-8 rounded-lg'
-                style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
-              />
-            </div>
-
-
-
-
-          </div> 
-
-
-
-
-
-
-
-
-
-
-
-</motion.div>
-
-
-
-
-
-
-
-
-
-
-<div className="my-2"
-        
-        style={{
-          backgroundImage: `url(${background})`, 
-          backgroundAttachment: 'fixed',
-          backgroundSize: 'contain',
-          backgroundPosition: 'center',
-        }}
-        
-        >
-  {/* <div className='flex flex-col items-center justify-center mt-12 mb-2'>
-    <p className=' mb-2' style={{ color: '', fontWeight: '600', fontSize: '24px' }}>We provide you with top notch services to secure your valuable assets</p>
-    <div className='bg-theme mb-2' style={{ width: '80px', height: '4px' }}></div>
-    <div className="px-8 text-center" style={{ fontSize: '16px',    }}>
-    We are your go-to company for everything related to security, broadband, safety and e-commerce services.
-    </div>
-  </div> */}
-
-  <div className='flex flex-col items-center justify-center mt-16 mb-2'>
-            <p className=' mb-2' style={{ color: '', fontWeight: '700', fontSize: '28px' }}>Why EF Gold</p>
-            <div className='bg-theme mb-2' style={{ width: '80px', height: '4px' }}></div>
-          </div>
-
-
-
-
-
-
-
-<div className=' flex flex-col md:flex-row items-center justify-between mt-4 '>
-  <div className='flex flex-col w-full md:w-1/4 justify-center items-center rounded-md shadow-md m-2 p-4 bg-white min-h-[200px] hover:shadow-2xl  hover:border-theme hover:border-2'>
-  <div className="mb-4" style={{ fontWeight: '600', fontSize: '16px' }}>Trusted & Secure</div>
-  <ShieldIcon className="mb-2" style={{ width: '40px', height: '40px', color: '#FFD700' }}/>
-    
-    <div className="px-8 text-center"  style={{fontSize: '16px',   }}>
-    We provide 100% authentic African gold.
-    </div>
-    {/* <div className="mt-4 cursor-pointer" style={{ fontWeight: '600', color: '#FFD700' }}>Read More</div> */}
-  </div>
-  <div className='flex flex-col w-full md:w-1/4 justify-center items-center rounded-md shadow-md m-2 p-4 bg-white min-h-[200px] hover:shadow-2xl  hover:border-theme hover:border-2'>
-  
-    <div className="mb-4" style={{ fontWeight: '600', fontSize: '16px' }}>Premium Quality</div>
-    <DiamondIcon className="mb-2" style={{ width: '40px', height: '40px', color: '#FFD700' }}/>
-    <div className="px-8 text-center"  style={{fontSize: '16px',   }}>
-    All our gold products are of highest purity.
-    </div>
-    {/* <div className="mt-4 cursor-pointer" style={{ fontWeight: '600', color: '#FFD700' }}>Read More</div> */}
-  </div>
-  <div className='flex flex-col w-full md:w-1/4 justify-center items-center rounded-md shadow-md m-2 p-4 bg-white min-h-[200px] hover:shadow-2xl  hover:border-theme hover:border-2'>
-  
-    <div className="mb-4" style={{ fontWeight: '600', fontSize: '16px' }}>Customer Satisfaction</div>
-    <HandshakeIcon className="mb-2" style={{ width: '40px', height: '40px', color: '#FFD700' }}/>
-    <div className="px-8 text-center"  style={{fontSize: '16px',   }}>
-    We prioritize transparenct customer service.
-    </div>
-    {/* <div className="mt-4 cursor-pointer" style={{ fontWeight: '600', color: '#FFD700' }}>Read More</div> */}
-  </div>
-  <div className='flex flex-col w-full md:w-1/4 justify-center items-center rounded-md shadow-md m-2 p-4 bg-white min-h-[200px] hover:shadow-2xl  hover:border-theme hover:border-2'>
-  
-  <div className="mb-4" style={{ fontWeight: '600', fontSize: '16px' }}>Best Market Prices</div>
-  <AttachMoneyIcon className="mb-2" style={{ width: '40px', height: '40px', color: '#FFD700' }}/>
-  <div className="px-8 text-center"  style={{fontSize: '16px',   }}>
-  Get the best deals on gold with competitive prices.
-  </div>
-  {/* <div className="mt-4 cursor-pointer" style={{ fontWeight: '600', color: '#FFD700' }}>Read More</div> */}
-</div>
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div className='flex flex-col items-center justify-center mt-16 mb-2'>
-            <p className=' mb-2' style={{ color: '', fontWeight: '700', fontSize: '28px' }}>Our Gallery</p>
-            <div className='bg-theme mb-2' style={{ width: '80px', height: '4px' }}></div>
-          </div>
-
-<motion.div
-      initial={{ opacity: 0, y: 50 }} // Start faded and below
-      animate={{ opacity: 1, y: 0 }} // Fade in and move up
-      transition={{ duration: 0.8, ease: "easeOut", delay: 1.5 }} // Smooth animation
-      className="flex w-full h-full items-center justify-center mt-4"
-    >
-      <div className="w-full">
-        <Slider {...settings}>
-          {goldImages.map((image, index) => (
-            <div key={index} className="flex w-full items-center justify-center px-2">
-              <img 
-                src={image} 
-                alt={`Slide ${index + 1}`} 
-                style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
-              />
-            </div>
-          ))}
-        </Slider>
-      </div>
-    </motion.div>
-
-
-
-
-    <div className='flex flex-col  items-center justify-center mt-16 mb-2'>
-            <p className=' mb-2' style={{ color: '', fontWeight: '700', fontSize: '28px' }}>Our Videos</p>
-            <div className='bg-theme mb-2' style={{ width: '80px', height: '4px' }}></div>
-          </div>
-          
-<div className="video-container" 
-style={{
-  position: "relative",
-  width: "100%",
-  height: "400px",
-  margin: "auto",
-  zIndex: 1, // Lower than navbar
-}}
->
-  
-    <Slider ref={sliderRef} {...settingsVideo}>
-      {videos.map((video, index) => (
-        <div key={index} className="video-slide">
-          <iframe
-            width="100%"
-            height="400px"
-            src={video}
-            title={`YouTube Video ${index + 1}`}
-            frameBorder="0"
-            allow="autoplay; encrypted-media"
-            allowFullScreen 
-            onContextMenu={(e) => e.preventDefault()}
-          ></iframe>
-        </div>
-      ))}
-    </Slider>
-{/* Top Overlay to Hide Branding */}
-<div className=" bg-gray-100" 
-style={{
-  position: "absolute",
-  top: 0,
-  left: 0,
-  width: "100%",
-  height: "70px",
-  // background: "white",
-  zIndex: 10,
-}}></div>
-      {/* Bottom Overlay to Hide Controls */}
-      <div className=" bg-gray-100"
-      style={{
-        position: "absolute",
-        bottom: 0,
-        left: 0,
-        width: "100%",
-        height: "50px",
-        // background: "black",
-        zIndex: 10,
-      }}></div>
-    
-    </div>
 
 
 
 
  
-          <div className='flex flex-col items-center justify-center mt-16 mb-2'>
+<div className='flex flex-col items-center justify-center mt-16 mb-2'>
             <p className=' mb-2' style={{ color: '', fontWeight: '700', fontSize: '24px' }}>Contact Us</p>
             <div className='bg-theme mb-2' style={{ width: '80px', height: '4px' }}></div>
           </div>
@@ -872,7 +556,7 @@ style={{
           <div 
               onClick={() => { handleSendMessage() }}
               style={{ borderWidth: '0px', width: '200px', color: '#424218' }}
-              className='mt-4  text-center rounded-sm px-4 py-2  text-sm cursor-pointer mb-20 bg-theme hover:text-theme hover:bg-black'>
+              className='mt-4  text-center rounded-sm px-4 py-2  text-sm cursor-pointer mb-20 bg-theme'>
               {isMessageSending ? 'Please wait..' : 'Send Message'} 
             </div>
 
@@ -884,78 +568,6 @@ style={{
 
           </div>
         </div>      
-
-
-
-
-
-
-
-
-
-        <div className='flex flex-col items-center justify-center mt-16 mb-2'>
-            <p className=' mb-2' style={{ color: '', fontWeight: '700', fontSize: '28px' }}>Frequently Asked Questions</p>
-            <div className='bg-theme mb-2' style={{ width: '80px', height: '4px' }}></div>
-          </div>
-
-          <motion.div
-      initial={{ opacity: 0, y: 50 }} // Start faded and below
-      animate={{ opacity: 1, y: 0 }} // Fade in and move up
-      transition={{ duration: 0.8, ease: "easeOut", delay: 1.5 }} // Smooth animation
-      className="flex w-full h-full items-center justify-center mt-4 mb-16 
-      px-8 md:px-4 lg:px-16 xl:px-24 2xl:px-80 py-2
-      "
-    >
-      <div className="w-full">
-        <div className="max-w-3xl mx-auto">
-          <div className="border-t border-gray-200">
-            {faqs.map((faq, index) => (
-              <div key={index} className="border-b border-theme">
-                {/* Question */}
-                <motion.div
-                  onClick={() => toggleFAQ(index)} // Toggle FAQ on click
-                  className="cursor-pointer py-4"
-                  whileHover={{ scale: 1.02 }} // Slight scale effect on hover
-                >
-                  <h3 className=" mb-2" style={{ fontSize: '20px' }}>{faq.question}</h3>
-                </motion.div>
-
-                {/* Answer (Animated Dropdown) */}
-                <AnimatePresence>
-                  {openIndex === index && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }} // Start collapsed
-                      animate={{ opacity: 1, height: "auto" }} // Expand
-                      exit={{ opacity: 0, height: 0 }} // Collapse
-                      transition={{ duration: 0.3, ease: "easeInOut" }} // Smooth transition
-                      className="overflow-hidden"
-                    >
-                      <p className=" pb-4" style={{ font: '16px' }}>{faq.answer}</p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </motion.div>
-
-
-
-
-
-
-
-        {isMobile ? <div></div> :  <Parallax 
-        imageUrl={goldx2}//"/images/your-image.jpg";
-            title={"Secure & Reliable Gold Supply Across the Globe"}
-            subtitle={"Ready to begin your journey with us?"}
-        />}
-
-
-
-
       <Footer 
         isMobile={isMobile} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} closeMenu={closeMenu}
       />

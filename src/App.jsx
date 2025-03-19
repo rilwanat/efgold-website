@@ -10,6 +10,7 @@ import AboutPage from './components/AboutPage.jsx';
 import WhyChooseUsPage from './components/WhyChooseUsPage.jsx';
 import FaqPage from './components/FaqPage.jsx';
 import ContactPage from './components/ContactPage.jsx';
+import BuyGold from './components/BuyGold.jsx';
 
  
      
@@ -49,6 +50,7 @@ function App() {
             <Route path='/why-choose-us' element={<WhyChooseUsPage isMobile={isMobile} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} closeMenu={closeMenu} />}/>
             <Route path='/faq' element={<FaqPage isMobile={isMobile} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} closeMenu={closeMenu} />}/>
             <Route path='/contact' element={<ContactPage isMobile={isMobile} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} closeMenu={closeMenu} />}/>
+            <Route path='/buy-gold' element={<BuyGold isMobile={isMobile} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} closeMenu={closeMenu} />}/>
 
             </Routes>
             

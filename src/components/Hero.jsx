@@ -12,23 +12,25 @@ const Hero = ({  }) => {
   const navigate = useNavigate();
   //
   const images = [
-    hero3,
+    // hero3,
     hero1,
-    hero2,
+    // hero2,
 
   ];
 
   const headerText = [
-    'Leaders in Gold Solutions',
-    'Trusted Partner in Gold Trade',
-    'Strategic Planning for Gold Business',
+    'EF GOLD',
+    // 'Leaders in Gold Solutions',
+    // 'Trusted Partner in Gold Trade',
+    // 'Strategic Planning for Gold Business',
 ];
 
   
   const subText = [
-    'Welcome to E.F Gold',
-    'Secure & Efficient Gold Transactions',
-    'Reliable Gold Supply Across Africa',
+    'Your Most Reliable and Trusted Source For Quality Africa Gold. We specialize in selling premium Africa gold products, ensuring authenticity and value for our customers.',
+    // 'Welcome to E.F Gold',
+    // 'Secure & Efficient Gold Transactions',
+    // 'Reliable Gold Supply Across Africa',
 ];
 
   //
@@ -59,8 +61,7 @@ const Hero = ({  }) => {
   }
 
   return (
-    // <div className="relative w-full h-[740px] overflow-hidden">
-      <div className="relative w-full min-h-screen overflow-hidden">
+    <div className="relative w-full h-[640px] overflow-hidden">
 
       <AnimatePresence>
         <motion.img
@@ -83,19 +84,10 @@ const Hero = ({  }) => {
 
 
       <div className="absolute inset-0 flex flex-col justify-center  text-white px-8 md:px-4 lg:px-16 xl:px-24 2xl:px-80 ">
-        <motion.div
-          className="text-lg md:text-xl mb-4"
-          variants={textVariants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          {subText[currentImageIndex]}
-        </motion.div>
+        
 
         <motion.h1
-          className="text-4xl md:text-6xl font-bold mb-4  md:w-1/2 md:min-h-[200px] text-theme" 
+          className="text-4xl md:text-6xl font-bold mb-4  md:w-1/2 md:min-h-[80px] text-theme" 
           style={{  }}
           variants={textVariants}
           initial="initial"
@@ -106,20 +98,40 @@ const Hero = ({  }) => {
           {headerText[currentImageIndex]}
         </motion.h1>
 
-        {/* <div className='flex'>
-            <div 
-              onClick={() => { navigateTo('/products') }}
-              style={{  width: '200px', background: '#FFFFFF', fontWeight: '600', color: '#424218' }}
-              className='text-center mt-2 border-white rounded-sm py-3  text-sm cursor-pointer mr-2'>
-              View Products
-            </div>
-            <div 
-              onClick={() => { navigateTo('/about-us'); }}
-              style={{  width: '200px', background: '#CBD67A', fontWeight: '600',  }}
-              className='text-center mt-2 border-white rounded-sm py-3  text-sm cursor-pointer '>
-              About Us
-            </div>
-        </div> */}
+        <motion.div
+          className="text-lg md:text-xl mb-8 md:w-1/2"
+          variants={textVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          {subText[currentImageIndex]}
+        </motion.div>
+
+        <motion.div
+          className="flex "
+          variants={textVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <div className='mb-8 flex items-center bg-black border-2 border-white rounded-lg px2 justify-center text-bold mr-4  cursor-pointer hover:text-black hover:bg-theme'
+    style={{ height: '40px', width: '160px'}}    
+    >
+      Learn More
+    </div>
+    <div className='mb-8 flex items-center bg-theme rounded-lg px2 justify-center text-bold text-black  cursor-pointer hover:text-theme hover:bg-black'
+    style={{ height: '40px', width: '160px'}} 
+    onClick={() => {navigateTo('/buy-gold');}}   
+    >
+      Buy Gold
+    </div>
+        </motion.div>
+
+        
+
         
       </div>
     </div>
@@ -127,3 +139,5 @@ const Hero = ({  }) => {
 };
 
 export default Hero;
+
+

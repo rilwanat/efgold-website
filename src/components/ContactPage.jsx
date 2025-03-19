@@ -44,10 +44,9 @@ import { motion } from "framer-motion";
 
 
 
-import ShieldIcon from '@mui/icons-material/Shield';
-import DiamondIcon from '@mui/icons-material/Diamond';
-import HandshakeIcon from '@mui/icons-material/Handshake';
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import AttachEmailIcon from '@mui/icons-material/AttachEmail';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 
 export default function ContactPage({ 
@@ -472,29 +471,29 @@ const handleSendMessage = async () => {
 
 <div className=' flex flex-col md:flex-row items-center justify-between mt-4 '>
   <div className='flex flex-col w-full md:w-1/3 justify-center items-center rounded-md shadow-md m-2 p-4 bg-white min-h-[200px] hover:shadow-2xl  hover:border-theme hover:border-2'>
-  <div className="mb-4" style={{ fontWeight: '600', fontSize: '16px' }}>Trusted & Secure</div>
-  <ShieldIcon className="mb-2" style={{ width: '40px', height: '40px', color: '#FFD700' }}/>
+  <div className="mb-4" style={{ fontWeight: '600', fontSize: '16px' }}>Phone Number</div>
+  <LocalPhoneIcon className="mb-2" style={{ width: '40px', height: '40px', color: '#FFD700' }}/>
     
     <div className="px-8 text-center"  style={{fontSize: '16px',   }}>
-    We provide 100% authentic African gold.
+    +234 809 111 3333
     </div>
     {/* <div className="mt-4 cursor-pointer" style={{ fontWeight: '600', color: '#FFD700' }}>Read More</div> */}
   </div>
   <div className='flex flex-col w-full md:w-1/3 justify-center items-center rounded-md shadow-md m-2 p-4 bg-white min-h-[200px] hover:shadow-2xl  hover:border-theme hover:border-2'>
   
-    <div className="mb-4" style={{ fontWeight: '600', fontSize: '16px' }}>Premium Quality</div>
-    <DiamondIcon className="mb-2" style={{ width: '40px', height: '40px', color: '#FFD700' }}/>
+    <div className="mb-4" style={{ fontWeight: '600', fontSize: '16px' }}>Email Address</div>
+    <AttachEmailIcon className="mb-2" style={{ width: '40px', height: '40px', color: '#FFD700' }}/>
     <div className="px-8 text-center"  style={{fontSize: '16px',   }}>
-    All our gold products are of highest purity.
+    info@efgold.net
     </div>
     {/* <div className="mt-4 cursor-pointer" style={{ fontWeight: '600', color: '#FFD700' }}>Read More</div> */}
   </div>
   <div className='flex flex-col w-full md:w-1/3 justify-center items-center rounded-md shadow-md m-2 p-4 bg-white min-h-[200px] hover:shadow-2xl  hover:border-theme hover:border-2'>
   
-    <div className="mb-4" style={{ fontWeight: '600', fontSize: '16px' }}>Customer Satisfaction</div>
-    <HandshakeIcon className="mb-2" style={{ width: '40px', height: '40px', color: '#FFD700' }}/>
+    <div className="mb-4" style={{ fontWeight: '600', fontSize: '16px' }}>Address</div>
+    <LocationOnIcon className="mb-2" style={{ width: '40px', height: '40px', color: '#FFD700' }}/>
     <div className="px-8 text-center"  style={{fontSize: '16px',   }}>
-    We prioritize transparenct customer service.
+    31 Pope John Paul II Street, Maitama, Abuja, Nigeria.
     </div>
     {/* <div className="mt-4 cursor-pointer" style={{ fontWeight: '600', color: '#FFD700' }}>Read More</div> */}
   </div>

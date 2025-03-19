@@ -21,3 +21,9 @@ body {
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Standard syntax */
   }
+
+
+  img {
+    user-select: none; /* Prevent text selection */
+    pointer-events: none; /* Disable click and drag */
+  }

@@ -109,12 +109,12 @@ function MobileMenu({
           <img
             className="block h-12  my-2 mr-2"
             src={logo}
-            alt="Logo"
+            alt="Logo" 
             onClick={() => {
               navigate('/');
             toggleMenu();
           }}
-            style={{ cursor: 'pointer' }}
+            style={{ cursor: 'pointer', userSelect: 'none', pointerEvents: 'none' }}
           />
           <div className='text-theme text-lg' style={{ fontWeight: '600', cursor: 'pointer', }}>E.F GOLD</div>
 

@@ -40,11 +40,11 @@ function Footer({
                 src={logo2}
                 alt="Logo"
                 onClick={() => { navigate('/'); }}
-                style={{ cursor: 'pointer' }}
+                style={{ cursor: 'pointer', userSelect: 'none', pointerEvents: 'none' }}
               />
             </div>
             {/* <p className=' mb-2' style={{ color: '#eeeeee', fontSize: '20px' }}>ABOUT</p> */}
-            <p className='' style={{ color: '#eeeeee', fontSize: '14px' }}>Your most reliable and trusted source ror quality Africa gold. We specialize in selling premium Africa gold products, ensuring authenticity and value for our customers.</p>
+            <p className='' style={{ color: '#eeeeee', fontSize: '14px' }}>Your most reliable and trusted source for quality African gold. We specialize in selling premium African gold products, ensuring authenticity and value for our customers.</p>
             <div className='flex mt-4' style={{ color: '#eeeeee' }}>
               <a 
               // href='https://www.facebook.com/efnetworkltd' 

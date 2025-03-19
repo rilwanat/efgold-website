@@ -28,6 +28,7 @@ const AdminSideNav = ({ currentPageName }) => {
       <div className='flex'>
         {/* <img className="ml-3 w-32 h-16 object-scale-down " src={logo} alt=""  /> */}
         <img className={`${open ? 'mx-4  w-48 h-28 object-scale-down' : 'mx-2 mt-4 w-10 h-10 object-scale-down'}  `}
+        style={{ userSelect: 'none', pointerEvents: 'none' }}
         src={open ? logo : logoSquare} alt=""  />
       </div>
       
@@ -66,7 +67,7 @@ const AdminSideNav = ({ currentPageName }) => {
       <hr className='mx-4 '/>
 
         <div className='flex mx-2 my-4 items-center'>
-          <img className={' w-10 h-10 object-scale-down'} style={{ borderRadius: '50%' }}
+          <img className={' w-10 h-10 object-scale-down'} style={{ borderRadius: '50%', userSelect: 'none', pointerEvents: 'none' }}
           src={logoSquare} alt=""  />
           <div className='flex'>
             <div className='flex flex-col ml-2 items-start'>

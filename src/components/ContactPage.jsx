@@ -258,6 +258,7 @@ const settings = {
   const [email, setEmail] = useState('');
   const [contactName, setContactName] = useState('');
   const [remark, setRemark] = useState('');
+  const [procurementProcedure, setProcurementProcedure] = useState('');
   const [file, setFile] = useState(null); // For file input
 
   
@@ -269,6 +270,7 @@ const settings = {
     if (!phoneNumber.trim()) missingFields.push('Phone Number');
     if (!email.trim()) missingFields.push('Email');
     if (!contactName.trim()) missingFields.push('Contact Name');
+    if (!procurementProcedure.trim()) missingFields.push('Procurement Procedure');
     if (!remark.trim()) missingFields.push('Remark');
 
     if (missingFields.length > 0) {
@@ -357,6 +359,7 @@ const handleSendMessage = async () => {
   formData.append('phone_number', phoneNumber);
   formData.append('email', email);
   formData.append('contact_name', contactName);
+  formData.append('procurement_procedure', procurementProcedure);
   formData.append('remark', remark);
   formData.append('prodcts_of_interest', 'Gold');//JSON.stringify(selectedOptions));
   if (file) {
@@ -384,6 +387,7 @@ const handleSendMessage = async () => {
           setPhoneNumber('');
           setEmail('');
           setContactName('');
+          setProcurementProcedure('');
           setRemark('');
           setFile(null);
           setCheckboxes(checkboxes.map(checkbox => ({ ...checkbox, checked: false })));
@@ -648,7 +652,7 @@ const handleSendMessage = async () => {
             />
           </div>  
 
-          {/* <div className='flex flex-col sm:flex-row relative  '>
+          <div className='hidden'>
             <input
               type='file'
               ref={fileInputRef}
@@ -657,7 +661,7 @@ const handleSendMessage = async () => {
               onChange={(e) => setFile(e.target.files[0])} // Store the selected file
               style={{  }}
             />
-          </div>  */}
+          </div> 
 
           <div className='flex flex-col sm:flex-row relative '>
             <textarea
@@ -665,26 +669,40 @@ const handleSendMessage = async () => {
               placeholder='Kindly tell us what you want and your procedure*'
               className='pl-4 border border-gray-300 rounded-sm py-2 px-2 w-full my-2 bg-white'
               value={remark}
-          onChange={(e) => setRemark(e.target.value)}
+          onChange={(e) => setProcurementProcedure(e.target.value)}
           rows="4"
+              style={{  }}
+            />
+          </div> 
+
+          
+          <div className='flex flex-col sm:flex-row relative '>
+            <input
+              type='text'
+              placeholder='Remark'
+              className='pl-4 border border-gray-300 rounded-sm py-2 px-2 w-full my-2 bg-white'
+              value={remark}
+          onChange={(e) => setRemark(e.target.value)}
               style={{  }}
             />
           </div> 
 
 
             <div className='flex flex-col sm:flex-row relative'>
-          <div 
-              onClick={() => { handleSendMessage() }}
-              style={{ borderWidth: '0px', width: '200px' }}
-              className='mt-4 mr-4 text-center rounded-sm px-4 py-2  text-sm cursor-pointer mb-20 bg-theme hover:text-theme hover:bg-black'>
-              {isMessageSending ? 'Please wait..' : 'Send Message'} 
-            </div>
+          
 
             <div 
               onClick={handleDivClick}
               style={{ borderWidth: '0px', width: '200px' }}
-              className='mt-4  text-center rounded-sm px-4 py-2  text-sm cursor-pointer mb-20 bg-theme hover:text-theme hover:bg-black'>
+              className='mt-4 mr-4 text-center rounded-sm px-4 py-2  text-sm cursor-pointer mb-20 bg-theme hover:text-theme hover:bg-black'>
               Attach File
+            </div>
+
+            <div 
+              onClick={() => { handleSendMessage() }}
+              style={{ borderWidth: '0px', width: '200px' }}
+              className='mt-4  text-center rounded-sm px-4 py-2  text-sm cursor-pointer mb-20 bg-theme hover:text-theme hover:bg-black'>
+              {isMessageSending ? 'Please wait..' : 'Send Message'} 
             </div>
           </div>
 

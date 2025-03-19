@@ -113,7 +113,7 @@ onMouseLeave={(e) => handleMouseLeave(e)}
                     src={logo}
                     alt="Logo"
                     onClick={() => {  }}
-                    style={{ cursor: 'pointer' }}
+                    style={{ cursor: 'pointer', userSelect: 'none', pointerEvents: 'none' }}
                   />
                   </a>
 

@@ -28,6 +28,7 @@ import gold12 from '../assets/images/gold/gold12.png';
 
 import logo from '../assets/images/logo.png';
 import goldBar from '../assets/images/gold-bar.png';
+import gideon from '../assets/images/gideon.png';
 
 
 import background from '../assets/images/background.png';
@@ -269,6 +270,7 @@ const settings = {
   const [email, setEmail] = useState('');
   const [contactName, setContactName] = useState('');
   const [remark, setRemark] = useState('');
+  const [procurementProcedure, setProcurementProcedure] = useState('');
   const [file, setFile] = useState(null); // For file input
 
   
@@ -280,6 +282,7 @@ const settings = {
     if (!phoneNumber.trim()) missingFields.push('Phone Number');
     if (!email.trim()) missingFields.push('Email');
     if (!contactName.trim()) missingFields.push('Contact Name');
+    if (!procurementProcedure.trim()) missingFields.push('Procurement Procedure');
     if (!remark.trim()) missingFields.push('Remark');
 
     if (missingFields.length > 0) {
@@ -368,6 +371,7 @@ const handleSendMessage = async () => {
   formData.append('phone_number', phoneNumber);
   formData.append('email', email);
   formData.append('contact_name', contactName);
+  formData.append('procurement_procedure', procurementProcedure);
   formData.append('remark', remark);
   formData.append('prodcts_of_interest', 'Gold');//JSON.stringify(selectedOptions));
   if (file) {
@@ -395,6 +399,7 @@ const handleSendMessage = async () => {
           setPhoneNumber('');
           setEmail('');
           setContactName('');
+          setProcurementProcedure('');
           setRemark('');
           setFile(null);
           setCheckboxes(checkboxes.map(checkbox => ({ ...checkbox, checked: false })));
@@ -575,10 +580,10 @@ We welcome your inquiries.</p>
 
 <div  className="flex w-full items-center justify-center px-2">
               <img 
-                src={goldBar} 
+                src={gideon} 
                 // alt={`Slide ${index + 1}`} 
                 className='ml-8 rounded-lg'
-                style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
+                style={{ width: '100%', height: 'auto', objectFit: 'contain', userSelect: 'none', pointerEvents: 'none' }}
               />
             </div>
 
@@ -711,7 +716,7 @@ We welcome your inquiries.</p>
               <img 
                 src={image} 
                 alt={`Slide ${index + 1}`} 
-                style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
+                style={{ width: '100%', height: 'auto', objectFit: 'contain', userSelect: 'none', pointerEvents: 'none' }}
               />
             </div>
           ))}
@@ -874,8 +879,8 @@ style={{
               style={{  }}
             />
           </div>  
-{/* 
-          <div className='flex flex-col sm:flex-row relative  '>
+
+          <div className='hidden '>
             <input
               type='file'
               ref={fileInputRef}
@@ -885,7 +890,7 @@ style={{
               onChange={handleFileChange}
               style={{  }}
             />
-          </div>  */}
+          </div> 
 
           <div className='flex flex-col sm:flex-row relative '>
             <textarea
@@ -893,28 +898,44 @@ style={{
               placeholder='Kindly tell us what you want and your procedure*'
               className='pl-4 border border-gray-300 rounded-sm py-2 px-2 w-full my-2 bg-white'
               value={remark}
-          onChange={(e) => setRemark(e.target.value)}
+          onChange={(e) => setProcurementProcedure(e.target.value)}
           rows="4"
               style={{  }}
             />
           </div> 
 
+          
+          <div className='flex flex-col sm:flex-row relative '>
+            <input
+              type='text'
+              placeholder='Remark'
+              className='pl-4 border border-gray-300 rounded-sm py-2 px-2 w-full my-2 bg-white'
+              value={remark}
+          onChange={(e) => setRemark(e.target.value)}
+              style={{  }}
+            />
+          </div> 
+
+
+
 
           <div className='flex flex-col sm:flex-row relative'>
-          <div 
-              onClick={() => { handleSendMessage() }}
-              style={{ borderWidth: '0px', width: '200px' }}
-              className='mt-4 mr-4 text-center rounded-sm px-4 py-2  text-sm cursor-pointer mb-20 bg-theme hover:text-theme hover:bg-black'>
-              {isMessageSending ? 'Please wait..' : 'Send Message'} 
-            </div>
+          
 
-            <div 
-              onClick={handleDivClick}
-              style={{ borderWidth: '0px', width: '200px' }}
-              className='mt-4  text-center rounded-sm px-4 py-2  text-sm cursor-pointer mb-20 bg-theme hover:text-theme hover:bg-black'>
-              Attach File
-            </div>
+          <div 
+            onClick={handleDivClick}
+            style={{ borderWidth: '0px', width: '200px' }}
+            className='mt-4 mr-4 text-center rounded-sm px-4 py-2  text-sm cursor-pointer mb-20 bg-theme hover:text-theme hover:bg-black'>
+            Attach File
           </div>
+
+          <div 
+            onClick={() => { handleSendMessage() }}
+            style={{ borderWidth: '0px', width: '200px' }}
+            className='mt-4  text-center rounded-sm px-4 py-2  text-sm cursor-pointer mb-20 bg-theme hover:text-theme hover:bg-black'>
+            {isMessageSending ? 'Please wait..' : 'Send Message'} 
+          </div>
+        </div>
 
 
 

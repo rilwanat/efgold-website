@@ -29,7 +29,7 @@ const Hero = ({  }) => {
 
   
   const subText = [
-    'Your most reliable and trusted source for quality Africa gold. We specialize in selling premium Africa gold products, ensuring authenticity and value for our customers.',
+    'Your most reliable and trusted source for quality African gold. We specialize in selling premium African gold products, ensuring authenticity and value for our customers.',
     // 'Welcome to E.F Gold',
     // 'Secure & Efficient Gold Transactions',
     // 'Reliable Gold Supply Across Africa',
@@ -68,7 +68,7 @@ const Hero = ({  }) => {
 {/* Text Content */}
 <div className="flex flex-col justify-center text-white px-8 md:px-4 lg:px-16 xl:px-24 2xl:px-80 lg:w-2/3">
   <motion.h1
-    className="text-4xl md:text-6xl font-bold mb-4 md:w-1/2 md:min-h-[80px] text-theme"
+    className="text-4xl md:text-6xl font-bold mt-10 mb-4 md:w-1/2 md:min-h-[80px] text-theme"
     variants={textVariants}
     initial="initial"
     animate="animate"
@@ -98,7 +98,8 @@ const Hero = ({  }) => {
     transition={{ duration: 0.8, delay: 0.2 }}
   >
     <div className='mb-8 flex items-center bg-black border-2 border-white rounded-lg px-2 justify-center text-bold mr-4 cursor-pointer hover:text-black hover:bg-theme'
-      style={{ height: '40px', width: '160px' }}
+      style={{ height: '40px', width: '160px' }} 
+      onClick={() => { navigateTo('/about-us'); }}
     >
       Learn More
     </div>
@@ -122,7 +123,7 @@ const Hero = ({  }) => {
       <img
         src={goldBar}
         className='rounded-lg'
-        style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
+        style={{ width: '100%', height: 'auto', objectFit: 'contain', userSelect: 'none', pointerEvents: 'none' }}
         alt="Hero Image"
       />
     </motion.div>

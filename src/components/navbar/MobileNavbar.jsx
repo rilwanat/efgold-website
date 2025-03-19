@@ -44,7 +44,7 @@ export default function MobileNavbar({
             alt="Logo"
             // onClick={toggleMenu}
             onClick={() => {navigate('/');}}
-            style={{ cursor: 'pointer' }}
+            style={{ cursor: 'pointer', userSelect: 'none', pointerEvents: 'none' }}
           />
 
 {/* <div className='text-theme' style={{ fontWeight: '600', cursor: 'pointer', }}>E.F GOLD</div> */}

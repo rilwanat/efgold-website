@@ -41,7 +41,7 @@ import gold12 from '../assets/images/gold/gold12.png';
 
 import logo from '../assets/images/logo.png';
 import goldBar from '../assets/images/gold-bar.png';
-
+import gideon from '../assets/images/gideon.png';
 
 import background from '../assets/images/background.png';
 
@@ -292,14 +292,14 @@ By working directly with miners in several African countries, we ensure a consis
 
 We welcome your inquiries.</p>
 
-<p className='mb-8' style={{fontSize: '18px', color: '#000000'  }}>For additional information, contact us today.</p>
+<p className='mb-8' style={{fontSize: '18px', color: '#000000'  }}>For additional information, <strong><a className='cursor-pointer text-green-600' onClick={() => {navigateTo('/buy-gold')}}>contact</a></strong> us today.</p>
 
-<div className='mb-8 flex items-center bg-theme rounded-lg px2 justify-center text-bold'
-style={{ height: '40px', width: '160px'}}    
-onClick={() => {navigateTo('/buy-gold');}}  
->
-Buy Gold
-</div>
+<div className='mb-8 flex items-center bg-theme rounded-lg px2 justify-center text-bold hover:text-theme hover:bg-black cursor-pointer'
+    style={{ height: '40px', width: '160px'}}    
+    onClick={() => {navigateTo('/buy-gold');}}  
+    >
+      Buy Gold
+    </div>
 
 </div>
 
@@ -308,10 +308,10 @@ Buy Gold
 
 <div  className="flex w-full items-center justify-center px-2">
 <img 
-src={goldBar} 
+src={gideon} 
 // alt={`Slide ${index + 1}`} 
 className='ml-8 rounded-lg'
-style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
+style={{ width: '100%', height: 'auto', objectFit: 'contain', userSelect: 'none', pointerEvents: 'none' }}
 />
 </div>
 
@@ -458,7 +458,7 @@ style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
               <img 
                 src={image} 
                 alt={`Slide ${index + 1}`} 
-                style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
+                style={{ width: '100%', height: 'auto', objectFit: 'contain', userSelect: 'none', pointerEvents: 'none' }}
               />
             </div>
           ))}

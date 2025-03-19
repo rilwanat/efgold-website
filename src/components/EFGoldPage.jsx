@@ -919,11 +919,10 @@ style={{
 
 
           {/* Display the file preview */}
-{filePreview && (
+{/* {filePreview && (
         <div className='mt-0'>
           <h3 className='text-lg font-semibold mb-2'>File Preview:</h3>
           {file.type.startsWith('image/') ? (
-            // Display image preview
             <img
               src={filePreview}
               alt='File Preview'
@@ -931,20 +930,18 @@ style={{
               style={{ maxHeight: '300px' }}
             />
           ) : file.type === 'application/pdf' ? (
-            // Display PDF preview using an iframe
             <iframe
               src={filePreview}
               title='PDF Preview'
               className='w-full h-96 rounded-lg shadow-md'
             />
           ) : (
-            // Display a generic message for unsupported file types
             <p className='text-gray-600'>
               Preview not available for this file type.
             </p>
           )}
         </div>
-      )}
+      )} */}
 
       </div>
 

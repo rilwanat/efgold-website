@@ -52,6 +52,36 @@ export default function BuyGold({
       window.scrollTo(0, 0);
     }, []);
 
+
+    
+      const [filePreview, setFilePreview] = useState(null);
+      const fileInputRef = useRef(null);
+      const handleDivClick = () => {
+        if (fileInputRef.current) {
+          fileInputRef.current.click(); 
+        }
+      };
+    
+      const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          setFile(file); // Store the file in state
+          const previewURL = URL.createObjectURL(file); // Generate a preview URL
+          setFilePreview(previewURL); 
+        }
+      };
+    
+      // Clean up the object URL when the component unmounts
+      React.useEffect(() => {
+        return () => {
+          if (filePreview) {
+            URL.revokeObjectURL(filePreview);
+          }
+        };
+      }, [filePreview]);
+
+
+      
     
   const [isPlaying, setIsPlaying] = useState(false);
   const sliderRef = useRef(null);
@@ -534,6 +564,7 @@ const handleSendMessage = async () => {
           <div className='flex flex-col sm:flex-row relative  '>
             <input
               type='file'
+              ref={fileInputRef}
               placeholder='Select File*'
               className='pl-4 border border-gray-300 rounded-sm py-2 px-2 w-full my-2  cursor-pointer bg-white'
               onChange={(e) => setFile(e.target.files[0])} // Store the selected file
@@ -553,12 +584,21 @@ const handleSendMessage = async () => {
           </div> 
 
 
+          <div className='flex flex-col sm:flex-row relative'>
           <div 
               onClick={() => { handleSendMessage() }}
-              style={{ borderWidth: '0px', width: '200px', color: '#424218' }}
-              className='mt-4  text-center rounded-sm px-4 py-2  text-sm cursor-pointer mb-20 bg-theme'>
+              style={{ borderWidth: '0px', width: '200px' }}
+              className='mt-4 mr-4 text-center rounded-sm px-4 py-2  text-sm cursor-pointer mb-20 bg-theme hover:text-theme hover:bg-black'>
               {isMessageSending ? 'Please wait..' : 'Send Message'} 
             </div>
+
+            <div 
+              onClick={handleDivClick}
+              style={{ borderWidth: '0px', width: '200px' }}
+              className='mt-4  text-center rounded-sm px-4 py-2  text-sm cursor-pointer mb-20 bg-theme hover:text-theme hover:bg-black'>
+              Attach File
+            </div>
+          </div>
 
       </div>
 

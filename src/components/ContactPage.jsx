@@ -43,6 +43,13 @@ import Hero from './Hero';
 import { motion } from "framer-motion";
 
 
+
+import ShieldIcon from '@mui/icons-material/Shield';
+import DiamondIcon from '@mui/icons-material/Diamond';
+import HandshakeIcon from '@mui/icons-material/Handshake';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+
+
 export default function ContactPage({ 
     isMobile, isMenuOpen, toggleMenu, closeMenu
  }) {
@@ -421,6 +428,84 @@ const handleSendMessage = async () => {
             {/* <WorkProcess /> */}
 
 
+
+
+
+            <div className="px-8 md:px-4 lg:px-16 xl:px-24 2xl:px-80 py-2"
+            
+            
+                                                          style={{
+                                                            backgroundImage: `url(${background})`, 
+                                                            backgroundAttachment: 'fixed',
+                                                            backgroundSize: 'contain',
+                                                            backgroundPosition: 'center',
+                                                          }}
+                                                          >
+            <div className="my-2"
+        
+        style={{
+          backgroundImage: `url(${background})`, 
+          backgroundAttachment: 'fixed',
+          backgroundSize: 'contain',
+          backgroundPosition: 'center',
+        }}
+        
+        >
+  {/* <div className='flex flex-col items-center justify-center mt-12 mb-2'>
+    <p className=' mb-2' style={{ color: '', fontWeight: '600', fontSize: '24px' }}>We provide you with top notch services to secure your valuable assets</p>
+    <div className='bg-theme mb-2' style={{ width: '80px', height: '4px' }}></div>
+    <div className="px-8 text-center" style={{ fontSize: '16px',    }}>
+    We are your go-to company for everything related to security, broadband, safety and e-commerce services.
+    </div>
+  </div> */}
+
+  <div className='flex flex-col items-center justify-center mt-16 mb-2'>
+            <p className=' mb-2' style={{ color: '', fontWeight: '700', fontSize: '28px' }}>Contact Us</p>
+            <div className='bg-theme mb-2' style={{ width: '80px', height: '4px' }}></div>
+          </div>
+
+
+
+
+
+
+
+<div className=' flex flex-col md:flex-row items-center justify-between mt-4 '>
+  <div className='flex flex-col w-full md:w-1/3 justify-center items-center rounded-md shadow-md m-2 p-4 bg-white min-h-[200px] hover:shadow-2xl  hover:border-theme hover:border-2'>
+  <div className="mb-4" style={{ fontWeight: '600', fontSize: '16px' }}>Trusted & Secure</div>
+  <ShieldIcon className="mb-2" style={{ width: '40px', height: '40px', color: '#FFD700' }}/>
+    
+    <div className="px-8 text-center"  style={{fontSize: '16px',   }}>
+    We provide 100% authentic African gold.
+    </div>
+    {/* <div className="mt-4 cursor-pointer" style={{ fontWeight: '600', color: '#FFD700' }}>Read More</div> */}
+  </div>
+  <div className='flex flex-col w-full md:w-1/3 justify-center items-center rounded-md shadow-md m-2 p-4 bg-white min-h-[200px] hover:shadow-2xl  hover:border-theme hover:border-2'>
+  
+    <div className="mb-4" style={{ fontWeight: '600', fontSize: '16px' }}>Premium Quality</div>
+    <DiamondIcon className="mb-2" style={{ width: '40px', height: '40px', color: '#FFD700' }}/>
+    <div className="px-8 text-center"  style={{fontSize: '16px',   }}>
+    All our gold products are of highest purity.
+    </div>
+    {/* <div className="mt-4 cursor-pointer" style={{ fontWeight: '600', color: '#FFD700' }}>Read More</div> */}
+  </div>
+  <div className='flex flex-col w-full md:w-1/3 justify-center items-center rounded-md shadow-md m-2 p-4 bg-white min-h-[200px] hover:shadow-2xl  hover:border-theme hover:border-2'>
+  
+    <div className="mb-4" style={{ fontWeight: '600', fontSize: '16px' }}>Customer Satisfaction</div>
+    <HandshakeIcon className="mb-2" style={{ width: '40px', height: '40px', color: '#FFD700' }}/>
+    <div className="px-8 text-center"  style={{fontSize: '16px',   }}>
+    We prioritize transparenct customer service.
+    </div>
+    {/* <div className="mt-4 cursor-pointer" style={{ fontWeight: '600', color: '#FFD700' }}>Read More</div> */}
+  </div>
+
+</div>
+
+
+
+</div></div>
+
+
             <div className="px-8 md:px-4 lg:px-16 xl:px-24 2xl:px-80 py-2"
             
             
@@ -437,10 +522,10 @@ const handleSendMessage = async () => {
 
 
  
-<div className='flex flex-col items-center justify-center mt-16 mb-2'>
+{/* <div className='flex flex-col items-center justify-center mt-16 mb-2'>
             <p className=' mb-2' style={{ color: '', fontWeight: '700', fontSize: '24px' }}>Contact Us</p>
             <div className='bg-theme mb-2' style={{ width: '80px', height: '4px' }}></div>
-          </div>
+          </div> */}
 
           <p className='flex justify-center mb-2' style={{fontSize: '16px', color: '#000000'  }}>Fill the form below to contact us and we will get back to you.</p>
           {/* <p className=' mb-2' style={{fontSize: '16px',   }}>Select product(s) of interest:</p> */}

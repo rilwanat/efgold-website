@@ -49,6 +49,14 @@ import AttachEmailIcon from '@mui/icons-material/AttachEmail';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 
+
+
+import { GoogleMap, LoadScript } from "@react-google-maps/api";
+
+
+
+
+
 export default function ContactPage({ 
     isMobile, isMenuOpen, toggleMenu, closeMenu
  }) {
@@ -58,7 +66,11 @@ export default function ContactPage({
     }, []);
 
 
-
+    const containerStyle = {width: "100%", height: "400px"};
+    const center = {lat: 37.7749, lng: -122.4194}; // Default to San Francisco
+    
+    
+    
     
       const [filePreview, setFilePreview] = useState(null);
       const fileInputRef = useRef(null);
@@ -707,6 +719,23 @@ const handleSendMessage = async () => {
           </div>
 
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+      <div style={{ width: "100%", height: "400px" }}>
+      <LoadScript googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY">
+        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10} />
+      </LoadScript>
+    </div>
 
 
 

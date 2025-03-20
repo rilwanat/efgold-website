@@ -797,7 +797,7 @@ style={{
 
 
  
-          <div className='flex flex-col items-center justify-center mt-16 mb-2'>
+          <div className='flex flex-col items-center justify-center mt-20 mb-2'>
             <p className=' mb-2' style={{ color: '', fontWeight: '700', fontSize: '24px' }}>Contact Us</p>
             <div className='bg-theme mb-2' style={{ width: '80px', height: '4px' }}></div>
           </div>

@@ -27,3 +27,17 @@ body {
     user-select: none; /* Prevent text selection */
     pointer-events: none; /* Disable click and drag */
   }
+
+
+
+
+
+
+
+
+
+
+
+.slick-slider {
+  padding-bottom: 30px; /* Add space for the dots */
+}

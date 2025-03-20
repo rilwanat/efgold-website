@@ -232,7 +232,7 @@ onMouseLeave={(e) => handleMouseLeave(e)}
                     key={subIndex}
                     href={subItem.href}
                     className="block p-2 hover:bg-theme hover:text-white rounded-sm cursor-pointer" 
-                    target={`${ item.label == 'COMPANY' || 'CONTACT' ? '' : '_blank'}`}
+                    target={`${ item.label === 'COMPANY' || item.label === 'CONTACT' ? '' : '_blank'}`}
                   >
                     {subItem.label}
                   </a>

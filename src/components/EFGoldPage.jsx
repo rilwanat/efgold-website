@@ -17,7 +17,7 @@ import gold1 from '../assets/images/gold/gold1.png';
 import gold2 from '../assets/images/gold/gold2.png';
 import gold3 from '../assets/images/gold/gold3.png';
 import gold4 from '../assets/images/gold/gold4.png';
-import gold5 from '../assets/images/gold/gold5.png';
+// import gold5 from '../assets/images/gold/gold5.png';
 import gold6 from '../assets/images/gold/gold6.png';
 import gold7 from '../assets/images/gold/gold7.png';
 import gold8 from '../assets/images/gold/gold8.png';
@@ -25,6 +25,7 @@ import gold9 from '../assets/images/gold/gold9.png';
 import gold10 from '../assets/images/gold/gold10.png';
 import gold11 from '../assets/images/gold/gold11.png';
 import gold12 from '../assets/images/gold/gold12.png';
+import gold13 from '../assets/images/gold/gold13.png';
 
 import logo from '../assets/images/logo.png';
 import goldBar from '../assets/images/gold-bar.png';
@@ -157,6 +158,8 @@ export default function EFGoldPage({
     getEmbedUrl("https://www.youtube.com/watch?v=HDGgMhByj8M"),
     getEmbedUrl("https://www.youtube.com/watch?v=qsLGYeQWT0Y"),
 
+    getEmbedUrl("https://youtube.com/watch?v=fTkoLWA3AtM"),
+
   ];
   const settingsVideo = {
     dots: true,
@@ -200,7 +203,7 @@ export default function EFGoldPage({
     gold2,
     gold3,
     gold4,
-    gold5,
+    // gold5,
     gold6,
     gold7,
     gold8,
@@ -208,6 +211,7 @@ export default function EFGoldPage({
     gold10,
     gold11,
     gold12,
+    gold13,
   ];
 const settings = {
   dots: false,

@@ -780,16 +780,16 @@ style={{
   zIndex: 10,
 }}></div>
       {/* Bottom Overlay to Hide Controls */}
-      {/* <div className=" bg-gray-100"
+      <div className=" bg-gray-100"
       style={{
         position: "absolute",
         bottom: 0,
         left: 0,
         width: "100%",
-        height: "50px",
+        height: "30px",
         // background: "black",
         zIndex: 10,
-      }}></div> */}
+      }}></div>
     
     </div>
 

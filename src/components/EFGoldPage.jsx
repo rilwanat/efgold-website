@@ -132,7 +132,7 @@ export default function EFGoldPage({
   const getEmbedUrl = (url) => {
     const regex = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/;
     const match = url.match(regex);
-    return match ? `https://www.youtube.com/embed/${match[1]}?rel=0` : null;
+    return match ? `https://www.youtube.com/embed/${match[1]}?rel=0&mute=1` : null;
   };
 
   const videos = [

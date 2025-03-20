@@ -731,11 +731,11 @@ const handleSendMessage = async () => {
 
 
 
-      <div style={{ width: "100%", height: "400px" }}>
-      <LoadScript googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY">
+      {/* <div style={{ width: "100%", height: "400px" }}>
+      <LoadScript googleMapsApiKey="">
         <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10} />
       </LoadScript>
-    </div>
+    </div> */}
 
 
 

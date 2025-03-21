@@ -158,7 +158,15 @@ export default function EFGoldPage({
     getEmbedUrl("https://www.youtube.com/watch?v=HDGgMhByj8M"),
     getEmbedUrl("https://www.youtube.com/watch?v=qsLGYeQWT0Y"),
 
-    getEmbedUrl("https://youtube.com/watch?v=fTkoLWA3AtM"),
+    getEmbedUrl("https://www.youtube.com/watch?v=fTkoLWA3AtM"),
+
+    getEmbedUrl("https://www.youtube.com/watch?v=RgBkDSRG9Zw"),
+    getEmbedUrl("https://www.youtube.com/watch?v=SOnOGFHSxRk"),
+    getEmbedUrl("https://www.youtube.com/watch?v=I5Xdq09strw"),
+    getEmbedUrl("https://www.youtube.com/watch?v=eQd4IEWaLlY"),
+
+
+
 
   ];
   const settingsVideo = {

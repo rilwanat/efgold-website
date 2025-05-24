@@ -27,6 +27,9 @@ import gold11 from '../assets/images/gold/gold11.png';
 import gold12 from '../assets/images/gold/gold12.png';
 import gold13 from '../assets/images/gold/gold13.png';
 
+import gold14 from '../assets/images/gold/gold14.png';
+import gold15 from '../assets/images/gold/gold15.png';
+
 import logo from '../assets/images/logo.png';
 import goldBar from '../assets/images/gold-bar.png';
 import gideon from '../assets/images/gideon.png';
@@ -164,6 +167,8 @@ export default function EFGoldPage({
     getEmbedUrl("https://www.youtube.com/watch?v=SOnOGFHSxRk"),
     getEmbedUrl("https://www.youtube.com/watch?v=I5Xdq09strw"),
     getEmbedUrl("https://www.youtube.com/watch?v=eQd4IEWaLlY"),
+    
+    // getEmbedUrl("https://www.youtube.com/watch?v=eQd4IEWaLlY"),
 
 
 
@@ -220,6 +225,9 @@ export default function EFGoldPage({
     gold11,
     gold12,
     gold13,
+
+    gold14,
+    gold15,
   ];
 const settings = {
   dots: false,
@@ -749,7 +757,7 @@ We welcome your inquiries.</p>
 
 
 
-    <div className='flex flex-col  items-center justify-center mt-16 mb-2'>
+    {/* <div className='flex flex-col  items-center justify-center mt-16 mb-2'>
             <p className=' mb-2' style={{ color: '', fontWeight: '700', fontSize: '28px' }}>Our Videos</p>
             <div className='bg-theme mb-2' style={{ width: '80px', height: '4px' }}></div>
           </div>
@@ -780,7 +788,6 @@ style={{
         </div>
       ))}
     </Slider>
-{/* Top Overlay to Hide Branding */}
 <div className=" bg-gray-100" 
 style={{
   position: "absolute",
@@ -791,19 +798,9 @@ style={{
   // background: "white",
   zIndex: 10,
 }}></div>
-      {/* Bottom Overlay to Hide Controls */}
-      {/* <div className=" bg-gray-100"
-      style={{
-        position: "absolute",
-        bottom: 0,
-        left: 0,
-        width: "100%",
-        height: "30px",
-        // background: "black",
-        zIndex: 10,
-      }}></div> */}
+      
     
-    </div>
+    </div> */}
 
 
 

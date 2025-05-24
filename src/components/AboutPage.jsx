@@ -187,8 +187,9 @@ export default function AboutPage({
             {/* <ChairmansMessage />  */}
             {/* <AboutUs /> */}
             {/* <WorkProcess /> */}
-
-
+            
+            
+            
             <div className="px-8 md:px-4 lg:px-16 xl:px-24 2xl:px-80 py-2"
             
             

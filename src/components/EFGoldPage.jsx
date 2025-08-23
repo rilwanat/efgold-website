@@ -30,6 +30,14 @@ import gold13 from '../assets/images/gold/gold13.png';
 import gold14 from '../assets/images/gold/gold14.png';
 import gold15 from '../assets/images/gold/gold15.png';
 
+import gold16 from '../assets/images/gold/gold16.png';
+import gold17 from '../assets/images/gold/gold17.png';
+
+import gold18 from '../assets/images/gold/gold18.png';
+import gold19 from '../assets/images/gold/gold19.png';
+import gold20 from '../assets/images/gold/gold20.png';
+
+
 import logo from '../assets/images/logo.png';
 import goldBar from '../assets/images/gold-bar.png';
 import gideon from '../assets/images/gideon.png';
@@ -228,6 +236,13 @@ export default function EFGoldPage({
 
     gold14,
     gold15,
+
+    gold16,
+    gold17,
+
+    gold18,
+    gold19,
+    gold20,
   ];
 const settings = {
   dots: false,
@@ -580,7 +595,7 @@ const toggleFAQ = (index) => {
 
 
 <p className='my-8 pt-2' style={{fontSize: '18px', color: '#000000'  }}>
-EF Gold is a global leader in the supply of African gold. With a commitment to excellence and sustainability, we foster economic growth and innovation in the gold trade. We provide secure air transportation for gold from Africa to the rest of the world, excluding sanctioned countries.
+EF Gold is a product of E.F Network Limited and a global leader in the supply of African gold. With a commitment to excellence and sustainability, we foster economic growth and innovation in the gold trade. We provide secure air transportation for gold from Africa to the rest of the world, excluding sanctioned countries.
 
 With over <strong>17 years</strong> in the gold business, we have served various African nations. Our gold is sold on a <strong>CIF</strong> or <strong>FOB</strong> basis, and we ensure safe air transport to all permitted destinations.</p>
 

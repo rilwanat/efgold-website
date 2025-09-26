@@ -76,7 +76,10 @@ function MobileMenu({
 
 
 
-
+const [isSubsidiariesOpen, setIsSubsidiariesOpen] = useState(false); // Add this state
+const toggleSubsidiaries = () => {
+    setIsSubsidiariesOpen(!isSubsidiariesOpen);
+  };
 
 
 
@@ -163,6 +166,61 @@ function MobileMenu({
         >
           Why Choose Us
         </motion.span> */}
+
+        {/* EF Subsidiaries Dropdown */}
+              <motion.div
+                variants={menuItemVariants}
+                initial="hidden"
+                animate={isMenuOpen ? "visible" : "hidden"}
+                className="text-lg cursor-pointer block my-4 mx-4"
+                onClick={toggleSubsidiaries}
+                style={{ position: 'relative' }}
+              >
+                <div className="flex items-center justify-between rounded-lg px-4 py-2 bg-theme hover:bg-darkTheme hover:text-theme">
+                  EF Subsidiaries
+                  <ArrowDropDownIcon />
+                </div>
+                {isSubsidiariesOpen && (
+                  <div className="ml-4 mt-2">
+                    {/* <motion.span
+                      variants={menuItemVariants}
+                      initial="hidden"
+                      animate="visible"
+                      className="text-lg cursor-pointer block my-0 mx-2 rounded-lg px-4 py-2 hover:bg-darkTheme hover:text-theme"
+                      onClick={() => {
+                        navigate('/ef-energy');
+                        toggleMenu();
+                      }}
+                    >
+                      EF Energy
+                    </motion.span> */}
+                    <motion.span
+                      variants={menuItemVariants}
+                      initial="hidden"
+                      animate="visible"
+                      className="text-lg cursor-pointer block my-0 mx-2 rounded-lg px-4 py-2 hover:bg-darkTheme hover:text-theme"
+                      onClick={() => {
+                        window.open('https://efwaste.com/', '_blank');
+                        toggleMenu();
+                      }}
+                    >
+                      EF Waste
+                    </motion.span>
+                    <motion.span
+                      variants={menuItemVariants}
+                      initial="hidden"
+                      animate="visible"
+                      className="text-lg cursor-pointer block my-0 mx-2 rounded-lg px-4 py-2 hover:bg-darkTheme hover:text-theme"
+                      onClick={() => {
+                        window.open('https://efskyview.com/', '_blank');
+                        toggleMenu();
+                      }}
+                    >
+                      EF Skyview
+                    </motion.span>
+                  </div>
+                )}
+              </motion.div>
 
         <motion.span
           variants={menuItemVariants}

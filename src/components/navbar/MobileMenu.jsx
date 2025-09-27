@@ -218,6 +218,18 @@ const toggleSubsidiaries = () => {
                     >
                       EF Skyview
                     </motion.span>
+                    <motion.span
+                      variants={menuItemVariants}
+                      initial="hidden"
+                      animate="visible"
+                      className="text-lg cursor-pointer block my-0 mx-2 rounded-lg px-4 py-2 hover:bg-darkTheme hover:text-theme"
+                      onClick={() => {
+                        window.open('https://pricecheck24.com/', '_blank');
+                        toggleMenu();
+                      }}
+                    >
+                      PriceCheck24
+                    </motion.span>
                   </div>
                 )}
               </motion.div>
